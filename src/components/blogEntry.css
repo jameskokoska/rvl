@@ -1,0 +1,24 @@
+.blog-entry-link{
+  color:black !important;
+  text-decoration: none !important;
+}
+
+.blog-entry-link > h2{
+  transition: color 300ms;
+}
+
+.blog-entry-link:hover > h2{
+  color: var(--font-link-color);
+  transition: color 150ms;
+}
+
+@media only screen and (max-width: 767px) {
+  .blog-entry-link > h2 {
+    font-size: 25px;
+    line-height: 1.15;
+    margin-bottom: 10px;
+  }
+  .page-enter {
+    transform: scale(1);
+  }
+}

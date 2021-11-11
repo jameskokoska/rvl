@@ -1,13 +1,245 @@
+:root {
+  --font-color: black;
+  --font-link-color: #315ae0;
+  --accent-color: #a8bcff;
+  --accent-color-themes: #c6d3ffcc;
+  --white: white;
+  --shadow-color: #00000017;
+  --shadow-color-dark: #0000002a;
+  --light-dark-accent-color:#00000025;
+  --light-dark-accent-color-heavy:#00000052;
+  --footer-background-color:#e6e6e6;
+  --monospace: monospace;
+}
+
+@font-face{
+  font-family: 'Roboto-Light';
+  font-weight: normal;
+  src: url(./assets/fonts/Roboto-Light.ttf);
+}
+
+@font-face{
+  font-family: 'Rubik-Medium';
+  font-weight: normal;
+  src: url(./assets/fonts/Rubik-Medium.ttf);
+}
+
+@font-face{
+  font-family: 'Rubik-Regular';
+  font-weight: normal;
+  src: url(./assets/fonts/Rubik-Regular.ttf);
+}
+
+@font-face{
+  font-family: 'DMSans-Bold';
+  font-weight: normal;
+  src: url(./assets/fonts/DMSans-Bold.ttf);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; 
+  min-height: 100vh;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+}
+
+.content{
+  flex:1;
+  height:"10000px";
+  background-color: "red";
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Courier New', monospace;
+}
+
+h1{
+  font-size: 40px;
+  margin:0px;
+  font-family: "DMSans-Bold";
+}
+
+h2{
+  font-size: 28px;
+  margin:0px;
+  margin-top: 20px;
+  font-family: "DMSans-Bold";
+}
+
+h3{
+  margin: 0px;
+  margin-top: 10px;
+  font-family: "DMSans-Bold";
+}
+
+p{
+  font-family: "Roboto-Light";
+  margin: 10px;
+  margin-bottom:10px;
+}
+.accent-paragraph{
+  font-family: "Rubik-Regular";
+}
+
+a{
+  text-decoration-color: transparent;
+  color: var(--font-link-color);
+  transition: text-decoration-color 250ms, opacity 250ms;
+  cursor: pointer;
+}
+
+a:hover{
+  text-decoration-color: var(--font-link-color);
+  transition: text-decoration-color 250ms, opacity 250ms;
+  opacity: 0.9;
+}
+
+.a{
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  color: var(--font-link-color);
+  transition: text-decoration-color 250ms, opacity 250ms;
+  cursor: pointer;
+  user-select: none;
+}
+
+.a:hover{
+  text-decoration-color: var(--font-link-color);
+  transition: text-decoration-color 250ms, opacity 250ms;
+  opacity: 0.9;
+  user-select: none;
+}
+
+.no-decoration{
+  color:black !important;
+  text-decoration: none !important;
+}
+
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+@media only screen and (max-width: 767px) {
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(97, 97, 97); 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(124, 124, 124);
+    background: rgb(124, 124, 124);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #d3d3d3fd; 
+  border-radius: 3px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.horizontal-padding {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.max-width {
+  max-width: 1100px;
+  width: 1100px;
+}
+
+
+.mobile-view{
+  display: none;
+}
+
+.desktop-view{
+  display: unset;
+}
+
+hr{
+  width: 100%;
+  height: 1.5px;
+  background-color: var(--light-dark-accent-color);
+  border: 0px solid #ffffff00;
+  margin: 10px 0px;
+}
+
+@media only screen and (max-width: 767px) {
+  .mobile-view{
+    display: unset;
+  }
+  .desktop-view{
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .horizontal-padding{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+.page-enter,
+.page-exit {
+  transition: opacity 300ms, transform 300ms ease-out;
+}
+
+.page-enter {
+  transform: scale(1.03);
+  opacity: 0;
+}
+
+.page-enter-active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.page-exit {
+  transform: scale(0.96);
+}
+
+.page-exit-active {
+  transform: scale(0.95);
+  opacity: 0;
+}
+
+/* .math {
+  font-weight: 900;
+  font-style: italic;
+} */
+
+@media only screen and (max-width: 767px) {
+  .page-exit-active {
+    transform: scale(1);
+  }
+  .page-enter {
+    transform: scale(1);
+  }
 }

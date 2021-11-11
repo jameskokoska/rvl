@@ -1,25 +1,90 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {Route, Redirect, Switch, HashRouter} from 'react-router-dom'
+import {TransitionGroup, CSSTransition} from 'react-transition-group'
+import ScrollToTop from "./components/scrollToTop"
+import {pages} from "./util/pages"
+import Error404 from './pages/error404'
+// import { SidebarSpace } from './components/sidebar'
+import { Navbar, NavbarSpace } from './components/navbar'
+import Footer from "./components/footer"
+import { dataBlog } from './data/blogs'
+import { BlogEntryPage } from './components/blogEntry'
+import { dataProjects } from './data/projects'
+import { ProjectEntryPage } from './components/projectEntry'
 
-function App() {
+export default function App() {
+  const navbarRef = React.useRef();
+
+  React.useEffect(() => {
+    handlePageChange(window.location.pathname);
+  }, []);
+
+  function handlePageChange(link){
+    navbarRef.current?.handlePageChange(link);
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter>
+      <Route render={({ location }) => {
+        return(
+        <div style={{position:"absolute",right:0, left:0, bottom:0, top:0}}>
+          <ScrollToTop/>
+          <Navbar ref={navbarRef}/>
+          <TransitionGroup component="div" className="App">
+            <CSSTransition timeout={300} classNames='page' key={location.pathname}> 
+              <Switch location={location}>
+                {[...pages["main"],...pages["hidden"]].map((item, index)=>{
+                  return(<Route path={item.link} exact render={()=>{
+                    handlePageChange(item.link); 
+                    return (
+                    <div style={{position:"absolute",right:0, left:0, bottom:0, top:0}}>
+                      <div style={{minHeight: "100vh"}}>
+                        {item.link!=="/blog"?<NavbarSpace/>:<div/>}
+                        {item.component}
+                      </div>
+                      {item.link!=="/blog"?<Footer/>:<div/>}
+                    </div>
+                  )}} key={item.link}/>)
+                })}
+                {dataBlog.map((blog)=>{
+                  if(blog.asset!==undefined && blog.asset!=="" && blog.webLocation!==undefined && blog.webLocation!==""){
+                    return <Route path={"/blog/"+blog.webLocation} exact render={()=>{
+                      handlePageChange("/blog"); 
+                      return (
+                      <div style={{position:"absolute",right:0, left:0, bottom:0, top:0}}>
+                        <div style={{minHeight: "100vh"}}>
+                          <BlogEntryPage src={process.env.PUBLIC_URL+"/"+blog.asset}/>
+                        </div>
+                      </div>
+                    )}} key={blog.title}/>
+                  } else {
+                    return <Route key={"404"} path='/404' component={Error404} />
+                  }
+                })}
+                {dataProjects.map((project)=>{
+                  if(project.asset!==undefined && project.asset!=="" && project.webLocation!==undefined && project.webLocation!==""){
+                    return <Route path={"/projects/"+project.webLocation} exact render={()=>{
+                      handlePageChange("/projects"); 
+                      return (
+                      <div style={{position:"absolute",right:0, left:0, bottom:0, top:0}}>
+                        <div style={{minHeight: "100vh"}}>
+                          <ProjectEntryPage src={process.env.PUBLIC_URL+"/"+project.asset}/>
+                        </div>
+                        <Footer/>
+                      </div>
+                    )}} key={project.title}/>
+                  } else {
+                    return <Route key={"404"} path='/404' component={Error404} />
+                  }
+                })}
+                <Route key={"404"} path='/404' component={Error404} />
+                <Redirect from='*' to='/404' />
+              </Switch>
+            </CSSTransition>
+          </TransitionGroup>
+        </div>
+      )}} />
+    </HashRouter>
   );
 }
 
-export default App;

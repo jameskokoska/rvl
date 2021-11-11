@@ -1,0 +1,113 @@
+.research-theme-title{
+  margin: 10px;
+}
+
+.research-themes-box-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.research-themes-box{
+  background-color: var(--white);
+  padding: 20px 20px;
+  margin: 5px 10px;
+  max-width: 1500px;
+  min-width: 500px;
+  flex: 1;
+  transition: transform 1s, box-shadow 0.5s;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px var(--shadow-color);
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  text-overflow: clip;
+}
+
+.research-themes-box h3{
+  margin: 0px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.research-themes-box p{
+  margin: 0px;
+  padding-top: 10px;
+}
+
+.research-themes-box:hover{
+  transform: scale(1.01);
+  box-shadow: 0px 0px 20px var(--shadow-color-dark);
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.research-theme-circle{
+  display:flex; 
+  margin:-12px; 
+  background-color:var(--accent-color-themes);
+  border-radius:200px;
+  width:100px;
+  height:100px;
+  padding:35px;
+  text-align:center;
+  align-items:center;
+  justify-content:center;
+  font-size: 17px;
+}
+
+.research-theme-circle-container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  padding:35px
+}
+
+@media only screen and (max-width: 767px) {
+  .research-theme-circle{
+    display:flex; 
+    margin:-5px -10px; 
+    border-radius:200px;
+    width:85px;
+    height:85px;
+    padding:20px;
+    text-align:center;
+    align-items:center;
+    justify-content:center;
+    font-size: 14px;
+  }
+  .research-theme-circle-container{
+    padding: 20px 5px
+  }
+  
+  .research-themes-box h3{
+    font-size: 21px;
+  }
+  .research-themes-box{
+    min-width: 80vw;
+    max-width: 80vw;
+    padding: 20px 20px;
+    margin:10px 0px;
+  }
+
+  .research-theme-title{
+    margin:0px;
+    margin-top: 20px;
+  }
+}
+
+.research-theme{
+  font-family: "Rubik-Regular";
+  display: inline-block;
+  background-color: var(--light-dark-accent-color);
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 2px 7px;
+  cursor: pointer;
+  transition: opacity 0.2s, background-color 0.2s;
+  user-select: none;
+}
+.research-theme:hover{
+  opacity: 0.8;
+  transition: opacity 0.2s, background-color 0.2s;
+}
