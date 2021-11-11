@@ -278,6 +278,8 @@ You can always test your changes before by running ```npm start```
 | webLocation | string | The URL of that page (will be `exampleWebsite.com/projects/webLocation`) | `"project1"` |
 
 ### Project Object 2 - External Link
+* Also supports just an image, title, and description - with no link
+* `link` is optional
 ```
   {
     "title":"Project 2",
@@ -291,7 +293,7 @@ You can always test your changes before by running ```npm start```
 | `title` | string | The title of the project | `"Project 2"` |
 | `description` | string | The description of the project | `"a project that redirects to another website"` |
 | `image` | string | The thumbnail image. All locations should point to where assets are stored: `public/` | `"assets/project-assets/images/placeholder2.jpg"` |
-| `link` | string | A URL leading to a project | `"https://google.ca"` |
+| `link` | string (optional) | A URL leading to a project | `"https://google.ca"` |
 
 ## Joining
 1. Open `src/data/joining.md` in an editor
