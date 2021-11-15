@@ -155,6 +155,7 @@ You can always test your changes before by running ```npm start```
     "date": "August 20, 2021",
     "webLocation": "blogPage1",
     "asset": "assets/blog-pages/blogPage0.html",
+    "description": "Some description.",
   },
 ```
 | attribute | type | notes | example value  |
@@ -163,6 +164,7 @@ You can always test your changes before by running ```npm start```
 | date | string | No specific format | `"August 20, 2021"` |
 | webLocation | string | The URL of that page (will be `exampleWebsite.com/blog/webLocation`) | `"blogPage1"` |
 | asset | string | All locations should point to where assets are stored: `public/` | `"assets/blog-pages/blogPage0.html"`
+| description | string (optional) | A description | `"Some description."`
 
 ### Blog Object 2 - External Link
 * Create a blog entry in the list that links to another website
@@ -170,7 +172,8 @@ You can always test your changes before by running ```npm start```
   {
     "title": "Test Entry To External Link",
     "date": "September 20, 2020",
-    "link": "https://google.ca", 
+    "link": "https://google.ca",
+    "description": "Some description.",
   },
 ```
 | attribute | type | notes | example value  |
@@ -178,6 +181,7 @@ You can always test your changes before by running ```npm start```
 | title | string | The title to be shown in the list of Blog Pages | "Test Entry To External Link" |
 | date | string | No specific format | `"September 20, 2020"` |
 | link | string | Should be a URL starting with `http` | `"https://google.ca"`
+| description | string (optional) | A description | `"Some description."`
 
 ## Publication Entries
 1. Open `src/data/publications.js` in an editor

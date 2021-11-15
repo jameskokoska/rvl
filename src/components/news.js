@@ -3,6 +3,11 @@ import './news.css';
 import {dataNews} from "../data/news.js"
 
 export default class News extends Component {
+  constructor() {
+    super();
+    this.amountShow = 5;
+    this.state={show:this.amountShow}
+  }
   render(){
     return(
       <>
@@ -10,11 +15,23 @@ export default class News extends Component {
         <div className="news-box-container">
           {
             dataNews.map((item, index)=>{
-              return <div className="news-box">
-                <p dangerouslySetInnerHTML={{__html: getMonth(item.date) + " " + getYear(item.date) + ": " + item.content}}/>
-              </div>
+              if(index >= this.state.show || index < this.state.show - this.amountShow){
+                return <></>
+              } else {
+                return <div className="news-box">
+                  <p dangerouslySetInnerHTML={{__html: getMonth(item.date) + " " + getYear(item.date) + ": " + item.content}}/>
+                </div>
+              }
             })
           }
+          <div style={{width:"100%", marginTop:"10px"}}>
+            <div style={{float:"left"}} onClick={()=>{if(!(this.state.show-this.amountShow<=0)) this.setState({show:this.state.show-this.amountShow})}} className={"news-load-more-button " + (this.state.show-this.amountShow<=0?"news-load-more-button-disabled":"")}>
+              Newer
+            </div>
+            <div style={{float:"right"}} onClick={()=>{if(!(this.state.show>dataNews.length)) this.setState({show:this.state.show+this.amountShow})}} className={"news-load-more-button " + (this.state.show>dataNews.length?"news-load-more-button-disabled":"")}>
+              Older
+            </div>
+          </div>
         </div>
       </>
     )

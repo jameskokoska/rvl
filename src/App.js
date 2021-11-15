@@ -1,5 +1,5 @@
 import React from 'react'
-import {Route, Redirect, Switch, HashRouter} from 'react-router-dom'
+import {Route, Redirect, Switch, BrowserRouter} from 'react-router-dom'
 import {TransitionGroup, CSSTransition} from 'react-transition-group'
 import ScrollToTop from "./components/scrollToTop"
 import {pages} from "./util/pages"
@@ -24,7 +24,7 @@ export default function App() {
   }
   
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Route render={({ location }) => {
         return(
         <div style={{position:"absolute",right:0, left:0, bottom:0, top:0}}>
@@ -70,7 +70,6 @@ export default function App() {
                         <div style={{minHeight: "100vh"}}>
                           <ProjectEntryPage src={process.env.PUBLIC_URL+"/"+project.asset}/>
                         </div>
-                        <Footer/>
                       </div>
                     )}} key={project.title}/>
                   } else {
@@ -82,9 +81,10 @@ export default function App() {
               </Switch>
             </CSSTransition>
           </TransitionGroup>
+          <Footer/>
         </div>
       )}} />
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

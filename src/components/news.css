@@ -24,6 +24,31 @@
   margin: 0px;
 }
 
+.news-load-more-button{
+  padding: 10px;
+  background-color: var(--accent-button);
+  border-radius: 10px;
+  color:black;
+  font-weight: 500;
+  transition: background-color 300ms, box-shadow 1200ms;
+  user-select: none;
+}
+
+.news-load-more-button:hover{
+  box-shadow: 2px 2px 10px var(--shadow-color);
+  cursor: pointer;
+  transition: box-shadow 200ms;
+}
+
+.news-load-more-button-disabled{
+  background-color: var(--accent-button-disabled);
+  transition: background-color 300ms;
+}
+
+.news-load-more-button-disabled:hover{
+  box-shadow: unset;
+}
+
 
 @media only screen and (max-width: 767px) {
   .news-box h3{

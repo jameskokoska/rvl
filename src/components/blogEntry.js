@@ -5,8 +5,11 @@ import {Link} from "react-router-dom";
 export class BlogEntry extends Component {
   render(){
     let children = <>
+      <div style={{height:"5px"}}/>
       <h2>{this.props.blog.title}</h2>
-      <p style={{margin:"1px", marginTop:"5px", marginBottom:"30px", color:"black"}}>{this.props.blog.date}</p>
+      {this.props.blog.date?<p style={{margin:"1px", marginTop:"5px", marginBottom:"5px", color:"black"}}>{this.props.blog.date}</p>:<></>}
+      {this.props.blog.description?<p style={{margin:"1px", color:"black"}}>{this.props.blog.description}</p>:<></>}
+      <div style={{height:"25px"}}/>
       <hr/>
     </>
     if(this.props.blog.asset!==undefined && this.props.blog.asset!=="" && this.props.blog.webLocation!==undefined && this.props.blog.webLocation!==""){

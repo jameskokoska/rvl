@@ -20,16 +20,20 @@ Examples:
 
 export const dataBlog = [
   {
+    "title": "Learning to Search in Task and Motion Planning with Streams",
+    "date": "September 14, 2021",
+    "link": "https://rvl.cs.toronto.edu/learning-tamp/", 
+  },
+  {
+    "title": "Backwards Reachability Tutorial",
+    "date": "September 1, 2020",
+    "link": "https://rvl.cs.toronto.edu/backwards-reachability/",
+    "description": "Using reachability analysis to compute safety guarantees for safety critical dynamic systems."
+  },
+  {
     "title": "Continual Model-Based Reinforcement Learning with Hypernetworks",
     "date": "August 18, 2020",
-    //webLocation is the webpage link: rvl.cs.toronto.edu/blog/hypercrl/
-    //if asset is empty, it will redirect to an outside website
     "webLocation": "hypercrl", 
     "asset": "assets/blog-pages/hypercrl.html",
   },
-  {
-    "title": "Test Entry To External Link",
-    "date": "test",
-    "link": "https://google.ca", 
-  }
 ]

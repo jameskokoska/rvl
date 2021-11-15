@@ -3,12 +3,15 @@
   --font-link-color: #315ae0;
   --accent-color: #a8bcff;
   --accent-color-themes: #c6d3ffcc;
+  --accent-button: #b4c5ffcc;
+  --accent-button-disabled:#f3f3f3cc;
   --white: white;
   --shadow-color: #00000017;
   --shadow-color-dark: #0000002a;
   --light-dark-accent-color:#00000025;
   --light-dark-accent-color-heavy:#00000052;
   --footer-background-color:#e6e6e6;
+  --publication-tag:#0000000e;
   --monospace: monospace;
 }
 

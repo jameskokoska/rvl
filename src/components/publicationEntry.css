@@ -28,23 +28,23 @@
 .publication-tag{
   font-family: "Rubik-Regular";
   display:inline-block;
-  background-color: var(--light-dark-accent-color);
+  background-color: var(--publication-tag);
   border-radius: 5px;
   margin-right: 10px;
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 2px 7px;
   cursor: pointer;
-  transition: opacity 0.2s, background-color 0.2s;
+  transition: background-color 0.2s;
   user-select: none;
 }
 .publication-tag:hover{
-  opacity: 0.8;
-  transition: opacity 0.2s, background-color 0.2s;
+  background-color: var(--accent-color);
+  transition: background-color 0.2s;
 }
 .publication-tag-selected{
   background-color: var(--accent-color);
-  transition: opacity 0.2s, background-color 0.2s;
+  transition: background-color 0.2s;
 }
 .loading{
   width:50px;

@@ -8,7 +8,7 @@ import Team from "../pages/team"
 export const pages = {
   "main" : [
     {
-      "title": "About",
+      "title": "Home",
       "link": "/",
       "component" : <Home/>
     },
@@ -28,8 +28,8 @@ export const pages = {
       "component" : <Team/>
     },
     {
-      "title": "Projects",
-      "link": "/projects",
+      "title": "Research",
+      "link": "/research",
       "component" : <Projects/>
     },
     {

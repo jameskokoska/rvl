@@ -65,6 +65,7 @@ export const dataPublications = [
         booktitle={IEEE International Conference on Intelligent Robots and Systems (IROS)},
       }
     `,
+    "html":"https://arxiv.org/abs/2003.10010",
     "code":"https://github.com/rvl-lab-utoronto/visual_search_in_the_wild",
     "tags":["field robotics","visual search","perception","human-robot interaction","visual navigation","visual tracking","visual attention"],
     "description":"",
@@ -100,6 +101,7 @@ export const dataPublications = [
       }
     `,
     "project":"https://sites.google.com/view/leaf-exploration",
+    "html":"https://arxiv.org/abs/2005.10934",
     "tags":["reinforcement learning","curriculum learning","exploration"],
     "description":"",
   },
@@ -115,6 +117,7 @@ export const dataPublications = [
         booktitle={IEEE International Conference on Robotics and Automation (ICRA)},
       }
     `,
+    "html":"https://arxiv.org/abs/2011.01298",
     "tags":["reinforcement learning","imitation learning","generative models"],
     "description":"",
   },
@@ -130,6 +133,7 @@ export const dataPublications = [
         booktitle={IEEE International Conference on Robotics and Automation (ICRA)},
       }
     `,
+    "html":"https://arxiv.org/abs/2009.11997",
     "tags":["reinforcement learning","continual learning"],
     "description":"",
   },
@@ -145,6 +149,7 @@ export const dataPublications = [
         booktitle={Computer Vision and Pattern Recognition (CVPR)},
       }
     `,
+    "html":"https://arxiv.org/abs/2103.03891",
     "tags":["generative models","disentanglement","image synthesis"],
     "description":"",
   },
@@ -160,6 +165,7 @@ export const dataPublications = [
         booktitle={IEEE International Conference on Intelligent Robots and Systems (IROS)},
       }
     `,
+    "html":"https://arxiv.org/abs/2003.07489",
     "video":"https://www.youtube.com/watch?v=4uCvzurthS4",
     "tags":["manipulation","control theory"],
     "description":"",
@@ -176,6 +182,7 @@ export const dataPublications = [
         booktitle={Conference on Learning for Dynamics and Control (L4DC)},
       }
     `,
+    "html":"https://arxiv.org/abs/2004.08763",
     "tags":["planning","reinforcement learning"],
     "description":"",
   },
@@ -278,6 +285,7 @@ export const dataPublications = [
         eprint    = {1708.04352},
       }
     `,
+    "html":"https://arxiv.org/abs/1708.04352",
     "tags":["reinforcement learning","simulation"],
     "description":"",
   },

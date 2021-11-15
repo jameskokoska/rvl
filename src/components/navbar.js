@@ -2,6 +2,8 @@ import React,{Component} from 'react'
 import './navbar.css';
 import {pages} from "../util/pages"
 import {Link} from "react-router-dom";
+// import { FooterSocial } from './footer';
+// import {dataSocials} from "../data/socials.js"
 
 export class Navbar extends Component {
   constructor() {
@@ -55,6 +57,15 @@ export class Navbar extends Component {
             }
           </div>
         </div>
+        {/* <div style={{position:"absolute", right:0}}>
+          <div className="footer-socials">
+            {dataSocials.map((social, index)=>{
+              return <>
+                <FooterSocial key={social.name} social={social}/>
+              </>
+            })}
+          </div>
+        </div> */}
       </div>
     )
   }
