@@ -7,9 +7,9 @@ import {Slideshow} from '../components/slideshow';
 export default class Home extends Component {
   render(){
     return(<>
-      <div className="desktop-view">
-        <div className="horizontal-padding">
-          <div style={{display:"flex",flexDirection:"row"}}>
+      <div className="desktop-view" >
+        <div className="horizontal-padding max-width-home">
+          <div style={{display:"flex",flexDirection:"row",backgroundColor:"black"}}>
             <div className="left-section">
               <Slideshow/>
               <div style={{height:"20px"}}/>

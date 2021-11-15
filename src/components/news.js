@@ -6,6 +6,7 @@ export default class News extends Component {
   constructor() {
     super();
     this.amountShow = 5;
+    this.amountShowExpand = 10;
     this.state={show:this.amountShow}
   }
   render(){
@@ -15,7 +16,7 @@ export default class News extends Component {
         <div className="news-box-container">
           {
             dataNews.map((item, index)=>{
-              if(index >= this.state.show || index < this.state.show - this.amountShow){
+              if(index >= this.state.show){
                 return <></>
               } else {
                 return <div className="news-box">
@@ -25,11 +26,8 @@ export default class News extends Component {
             })
           }
           <div style={{width:"100%", marginTop:"10px"}}>
-            <div style={{float:"left"}} onClick={()=>{if(!(this.state.show-this.amountShow<=0)) this.setState({show:this.state.show-this.amountShow})}} className={"news-load-more-button " + (this.state.show-this.amountShow<=0?"news-load-more-button-disabled":"")}>
-              Newer
-            </div>
-            <div style={{float:"right"}} onClick={()=>{if(!(this.state.show>dataNews.length)) this.setState({show:this.state.show+this.amountShow})}} className={"news-load-more-button " + (this.state.show>dataNews.length?"news-load-more-button-disabled":"")}>
-              Older
+            <div style={{float:"left"}} onClick={()=>{this.setState({show:this.state.show+this.amountShowExpand})}} className={"news-load-more-button " + (this.state.show>=dataNews.length?"news-load-more-button-disabled":"")}>
+              More News
             </div>
           </div>
         </div>

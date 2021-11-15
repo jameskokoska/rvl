@@ -10,7 +10,8 @@
   --shadow-color-dark: #0000002a;
   --light-dark-accent-color:#00000025;
   --light-dark-accent-color-heavy:#00000052;
-  --footer-background-color:#e6e6e6;
+  --footer-background-color:#ffffff4b;
+  --navbar-background-color: #ffffffd3;
   --publication-tag:#0000000e;
   --monospace: monospace;
 }
@@ -168,6 +169,13 @@ html{
 .horizontal-padding {
   margin-left: 5%;
   margin-right: 5%;
+}
+
+@media only screen and (min-width: 1600px) {
+  .max-width-home {
+    max-width: 1500px;
+    margin:auto
+  }
 }
 
 .max-width {

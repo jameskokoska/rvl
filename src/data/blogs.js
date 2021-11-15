@@ -22,14 +22,14 @@ export const dataBlog = [
   {
     "title": "Learning to Search in Task and Motion Planning with Streams",
     "date": "September 14, 2021",
-    "link": "https://rvl.cs.toronto.edu/learning-tamp/", 
+    "link": "https://rvl.cs.toronto.edu/learning-based-tamp/", 
   },
-  {
-    "title": "Backwards Reachability Tutorial",
-    "date": "September 1, 2020",
-    "link": "https://rvl.cs.toronto.edu/backwards-reachability/",
-    "description": "Using reachability analysis to compute safety guarantees for safety critical dynamic systems."
-  },
+  // {
+  //   "title": "Backwards Reachability Tutorial",
+  //   "date": "September 1, 2020",
+  //   "link": "https://rvl.cs.toronto.edu/backwards-reachability/",
+  //   "description": "Using reachability analysis to compute safety guarantees for safety critical dynamic systems."
+  // },
   {
     "title": "Continual Model-Based Reinforcement Learning with Hypernetworks",
     "date": "August 18, 2020",

@@ -1,5 +1,6 @@
 .footer{
   background-color: var(--footer-background-color);
+  backdrop-filter: blur(12px);
   margin-top:50px;
   box-shadow: 0px 0px 10px var(--shadow-color);
   display: flex;
