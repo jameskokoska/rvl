@@ -9,7 +9,7 @@ export default class Home extends Component {
     return(<>
       <div className="desktop-view" >
         <div className="horizontal-padding max-width-home">
-          <div style={{display:"flex",flexDirection:"row",backgroundColor:"black"}}>
+          <div style={{display:"flex",flexDirection:"row"}}>
             <div className="left-section">
               <Slideshow/>
               <div style={{height:"20px"}}/>
