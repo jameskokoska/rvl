@@ -1,58 +1,76 @@
 import React,{Component} from 'react'
 import './publicationEntry.css';
 import useCollapse from 'react-collapsed'
-import { Document, Page, pdfjs } from 'react-pdf';
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+// import { Document, Page, pdfjs } from 'react-pdf';
+// pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-function PDF(props) {
-  if(props.pdf===undefined && props.html===undefined){
-    return <></>
-  } else {
-    let pdfParsed = ""
-    if(props.pdf!==undefined){
-      pdfParsed = process.env.PUBLIC_URL+"/"+props.pdf
-    } else if (props.html!==undefined){
-      if(props.html.includes("arxiv.org")){
-        pdfParsed = props.html.replace("abs","pdf") + ".pdf"
-      } else if(props.html.includes("openreview.net")){
-        //website does not allow
-        // pdfParsed = props.html.replace("forum?id=","pdf?id=")
-        return <></>
-      } else if(props.html.includes("roboticsproceedings.org")){
-        //website does not allow
-        // pdfParsed = props.html.replace(".html","pdf")
-        return <></>
-      } else {
-        return <></>
-      }
-    } else {
-      return <></>
-    }
+// function PDF(props) {
+//   if(props.pdf===undefined && props.html===undefined){
+//     return <></>
+//   } else {
+//     let pdfParsed = ""
+//     if(props.pdf!==undefined){
+//       pdfParsed = process.env.PUBLIC_URL+"/"+props.pdf
+//     } else if (props.html!==undefined){
+//       if(props.html.includes("arxiv.org")){
+//         pdfParsed = props.html.replace("abs","pdf") + ".pdf"
+//       } else if(props.html.includes("openreview.net")){
+//         //website does not allow
+//         // pdfParsed = props.html.replace("forum?id=","pdf?id=")
+//         return <></>
+//       } else if(props.html.includes("roboticsproceedings.org")){
+//         //website does not allow
+//         // pdfParsed = props.html.replace(".html","pdf")
+//         return <></>
+//       } else {
+//         return <></>
+//       }
+//     } else {
+//       return <></>
+//     }
     
     
-    return (
-      <div>
-        <Document
-          file={pdfParsed}
-          loading={<Loading style={{width:"50px", height:"50px", padding:"59px 40px"}}/>}
-        >
-          <Page height={200} width={130} pageNumber={1} renderAnnotationLayer={false} renderTextLayer={false}/>
-        </Document>
-      </div>
-    );
-  }
-}
+//     return (
+//       <div>
+//         <Document
+//           file={pdfParsed}
+//           loading={<Loading style={{width:"50px", height:"50px", padding:"59px 40px"}}/>}
+//         >
+//           <Page height={200} width={130} pageNumber={1} renderAnnotationLayer={false} renderTextLayer={false}/>
+//         </Document>
+//       </div>
+//     );
+//   }
+// }
+
+// class Loading extends Component{
+//   render(){
+//     return <div style={this.props.style} className="loading"></div>
+//   }
+// }
 
 export default function PublicationEntry(props){
   let extraParams = {"pdf":"pdf","html":"pdf", "bibtex":"bibtex", "video":"video", "project":"project", "code":"code"}
 
   const { getCollapseProps, getToggleProps} = useCollapse()
+  let thumbnail = <></>
+  if(props.publication["pdf"]!==undefined && props.publication["thumbnail"]!==undefined){
+    thumbnail = <a href={process.env.PUBLIC_URL+"/"+props.publication["pdf"]}>
+      <img className="publication-thumbnail" alt={props.publication["title"]} src={process.env.PUBLIC_URL+"/"+props.publication["thumbnail"]}/>
+    </a>
+  } else if(props.publication["html"]!==undefined && props.publication["thumbnail"]!==undefined){
+    thumbnail = <a href={props.publication["html"]}>
+      <img className="publication-thumbnail" alt={props.publication["title"]} src={process.env.PUBLIC_URL+"/"+props.publication["thumbnail"]}/>
+    </a>
+  } else if(props.publication["thumbnail"]!==undefined){
+    thumbnail = <img className="publication-thumbnail" alt={props.publication["title"]} src={process.env.PUBLIC_URL+"/"+props.publication["thumbnail"]}/>
+  }
   return <div className="publication-entry">
     {props.showYear?<><hr/><h2>{props.publication["year"]}</h2></>:<div/>}
     <div style={{display:"flex", flexDirection:"row", alignItems:"center"}}>
       <div className="desktop-view">
         <div style={{paddingRight:"13px"}}>
-          <PDF pdf={props.publication["pdf"]} html={props.publication["html"]}/>
+          {thumbnail}
         </div>
       </div>
       <div>
@@ -108,11 +126,5 @@ export class PublicationTag extends Component{
     return(
       <div onClick={this.onClick} className={"publication-tag "+(this.state.selected?"publication-tag-selected":"")}>{this.props.tag}</div>
     )
-  }
-}
-
-class Loading extends Component{
-  render(){
-    return <div style={this.props.style} className="loading"></div>
   }
 }

@@ -205,17 +205,20 @@ You can always test your changes before by running ```npm start```
     "video":"https://www.youtube.com",
     "project":"https://google.com",
     "tags":["tag1","tag2"],
+    "thumbnail":"assets/publication-thumbnails/thumbnail.png",
     "description":"Lorem ipsum...",
   },
 ```
 | attribute | type | notes | example value  |
 |---|---|---|---|
 | `bibtex` | string | The bibtex of the publication | `"@InProceeding{...}"` |
-| `pdf` | string (optional) | A URL leading to a pdf. Also supports a PDF location from `public/` assets. | `"assets/pdf/iros2012_multirobot_env_monitoring.pdf"` |
+| `pdf` | string (optional) | A PDF location from `public/` assets. | `"assets/pdf/iros2012_multirobot_env_monitoring.pdf"` |
+| `html` | string (optional) | A URL leading to a pdf | `"https://www.google.ca"` |
 | `code` | string (optional) | Content supports inline html | `"https://github.com"` |
 | `video` | string (optional) | A URL leading to a video | `"https://www.youtube.com"` |
 | `project` | string (optional) | A URL leading to a project | `""https://google.com"` |
 | `tags` | list of string | Tags used for tag searching | `["tag1","tag2"]` |
+| `thumbnail` | string | A thumbnail image location from `public/` assets. | `"assets/publication-thumbnails/thumbnail.png"` |
 | `description` | string | Unused as of now | `"Lorem ipsum..."` |
 
 ## Research Themes
@@ -239,20 +242,29 @@ You can always test your changes before by running ```npm start```
 ## Team Members
 1. Open `src/data/team.js` in an editor
 2. Add team object to the list
-### Research Object
+### Team Member Object
 ```
   {
-    "title": "Theme Title",
-    "content": [
-      "theme1",
-      "theme2",
-    ],
-  },
+    "name":"Name",
+    "image":"assets/team/name.jpg",
+    "description":"Lorem ipsum...",
+    "website":"http://www.google.ca",
+    "email":"email@email.com",
+    "twitter":"http://www.twitter.com",
+    "linkedIn":"http://www.linkedin.com",
+    "googleScholar":"http://www.google.ca",
+  }
 ```
 | attribute | type | notes | example value  |
 |---|---|---|---|
-| `title` | string | The title of the grouping of research themes | `"Theme Title"` |
-| `content` | list of string | The themes listed | `["theme1","theme2",]` |
+| `name` | string | The name of the member | `"Name"` |
+| `image` | string | The members image. All locations should point to where assets are stored: `public/` | `"assets/team/name.jpg"` |
+| `description` | string (optional) | A description under the name | `"Lorem ipsum..."` |
+| `website` | string (optional) | The team member's personal website | `"http://www.google.ca"` |
+| `email` | string (optional) | The team member's email | `"email@email.com"` |
+| `twitter` | string (optional) | The team member's Twitter | `"http://www.twitter.com"` |
+| `linkedIn` | string (optional) | The team member's LinkedIn | `"http://www.linkedin.com"` |
+| `googleScholar` | string (optional) | The team member's Google Scholar | `"http://www.google.ca"` |
 
 ## Project Entries
 1. Open `src/data/projects.js` in an editor

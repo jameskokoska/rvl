@@ -6,13 +6,35 @@
   transition: transform 1s, box-shadow 0.5s;
   border-radius: 10px;
   box-shadow: 0px 0px 20px var(--shadow-color);
-  cursor: pointer;
 }
 
 .team-member-title{
   margin: 0px;
   font-size: 24px;
   margin-left: 19px;
+}
+
+.team-member-socials{
+  margin-left: 19px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.team-member-social-icon{
+  width:25px;
+  height:20px;
+  padding: 5px;
+  margin: -6px;
+  margin-right: 2px;
+  object-fit: contain;
+  transition: transform 200ms;
+}
+
+.team-member-social-icon:hover{
+  transform: scale(1.1);
+  transition: transform 200ms;
 }
 
 .team-member-image{

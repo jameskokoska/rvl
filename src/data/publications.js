@@ -11,6 +11,7 @@ export const dataPublications = [
     `,
     "html":"https://arxiv.org/abs/2010.14497",
     "tags":["reinforcement learning","safe learning","exploration"],
+    "thumbnail":"/assets/publication-thumbnails/Conservative Safety Critics for Exploration.png",
     "description":"",
   },
   { 
@@ -24,6 +25,7 @@ export const dataPublications = [
     `,
     "html" : "https://openreview.net/forum?id=c_E8kFWfhp0",
     "tags":["differentiable simulation","differentiable rendering","system identification","perception","image synthesis"],
+    "thumbnail":"/assets/publication-thumbnails/gradSim Differentiable simulation for system identification and visuomotor control.png",
     "description":"",
   },
   { 
@@ -32,12 +34,12 @@ export const dataPublications = [
         title={Skill Transfer via Partially Amortized Hierarchical Planning},
         author={Kevin Xie and Homanga Bharadhwaj and Danijar Hafner and Animesh Garg and Florian Shkurti},
         year={2021},
-        booktitle = {International Conference on Learning Representations (ICLR)}, 
-        
+        booktitle = {International Conference on Learning Representations (ICLR)},
       }
     `,
     "html" : "https://openreview.net/forum?id=jXe91kq3jAq",
     "tags":["reinforcement learning","skill learning","planning"],
+    "thumbnail":"/assets/publication-thumbnails/Skill Transfer via Partially Amortized Hierarchical Planning.png",
     "description":"",
   },
   { 
@@ -51,6 +53,7 @@ export const dataPublications = [
     `,
     "html" : "https://arxiv.org/abs/2003.04514",
     "tags":["ensemble methods"],
+    "thumbnail":"/assets/publication-thumbnails/DIBS Diversity-Inducing Information Bottleneck in Model Ensembles.png",
     "description":"",
   },
   { 
@@ -68,6 +71,7 @@ export const dataPublications = [
     "html":"https://arxiv.org/abs/2003.10010",
     "code":"https://github.com/rvl-lab-utoronto/visual_search_in_the_wild",
     "tags":["field robotics","visual search","perception","human-robot interaction","visual navigation","visual tracking","visual attention"],
+    "thumbnail":"/assets/publication-thumbnails/One-Shot Informed Robotic Visual Search in the Wild.png",
     "description":"",
   },
   { 
@@ -86,6 +90,7 @@ export const dataPublications = [
     "video":"https://www.youtube.com/watch?v=qpcmwb_7QA4",
     "project":"http://www.cim.mcgill.ca/mrl/nav2goal/",
     "tags":["field robotics","visual search","perception","visual navigation","imitation learning"],
+    "thumbnail":"/assets/publication-thumbnails/Vision-Based Goal-Conditioned Policies for Underwater Navigation in the Presence of Obstacles.png",
     "description":"",
   },
   { 
@@ -103,6 +108,7 @@ export const dataPublications = [
     "project":"https://sites.google.com/view/leaf-exploration",
     "html":"https://arxiv.org/abs/2005.10934",
     "tags":["reinforcement learning","curriculum learning","exploration"],
+    "thumbnail":"/assets/publication-thumbnails/LEAF Latent Exploration Along the Frontier.png",
     "description":"",
   },
   { 
@@ -119,6 +125,7 @@ export const dataPublications = [
     `,
     "html":"https://arxiv.org/abs/2011.01298",
     "tags":["reinforcement learning","imitation learning","generative models"],
+    "thumbnail":"/assets/publication-thumbnails/Shaping Rewards for Reinforcement Learning with Imperfect Demonstrations using Generative Models.png",
     "description":"",
   },
   { 
@@ -135,6 +142,7 @@ export const dataPublications = [
     `,
     "html":"https://arxiv.org/abs/2009.11997",
     "tags":["reinforcement learning","continual learning"],
+    "thumbnail":"/assets/publication-thumbnails/Continual Model-Based Reinforcement Learning with Hypernetworks.png",
     "description":"",
   },
   { 
@@ -151,6 +159,7 @@ export const dataPublications = [
     `,
     "html":"https://arxiv.org/abs/2103.03891",
     "tags":["generative models","disentanglement","image synthesis"],
+    "thumbnail":"/assets/publication-thumbnails/LOHO Latent Optimization of Hairstyles via Orthogonalization.png",
     "description":"",
   },
   { 
@@ -168,6 +177,7 @@ export const dataPublications = [
     "html":"https://arxiv.org/abs/2003.07489",
     "video":"https://www.youtube.com/watch?v=4uCvzurthS4",
     "tags":["manipulation","control theory"],
+    "thumbnail":"/assets/publication-thumbnails/Catch the Ball Accurate High-Speed Motions for Mobile Manipulators via Inverse Dynamics Learning.png",
     "description":"",
   },
   { 
@@ -184,6 +194,7 @@ export const dataPublications = [
     `,
     "html":"https://arxiv.org/abs/2004.08763",
     "tags":["planning","reinforcement learning"],
+    "thumbnail":"/assets/publication-thumbnails/Model-Predictive Control via Cross-Entropy and Gradient-Based Optimization.png",
     "description":"",
   },
   { 
@@ -198,6 +209,7 @@ export const dataPublications = [
     `,
     "project":"http://cim.mcgill.ca/~mrl/adversarial_driving_scenarios/",
     "tags":["simulation","adversarial scenarios"],
+    "thumbnail":"/assets/publication-thumbnails/Generating Adversarial Driving Scenarios in High-Fidelity Simulators.png",
     "description":"",
   },
   { 
@@ -215,6 +227,7 @@ export const dataPublications = [
     "video":"http://www.cim.mcgill.ca/~florian/pursuit_via_irl.mp4",
     "pdf":"assets/pdf/icra_2018_irl_pursuit.pdf",
     "tags":["planning under uncertainty","imitation learning"],
+    "thumbnail":"/assets/publication-thumbnails/Model-Based Probabilistic Pursuit via Inverse Reinforcement Learning.png",
     "description":"",
   },
   { 
@@ -232,6 +245,7 @@ export const dataPublications = [
     `,
     "pdf":"assets/pdf/oceans18_synthetic_tracking.pdf",
     "tags":["visual tracking","field robotics","simulation"],
+    "thumbnail":"/assets/publication-thumbnails/Synthetically Trained 3D Visual Tracker of Underwater Vehicles.png",
     "description":"",
   },
   { 
@@ -245,11 +259,11 @@ export const dataPublications = [
         month = "September",
         address = "Vancouver, Canada",
         video= "http://www.cim.mcgill.ca/~mrl/robot_tracking/",
-        
       }
     `,
     "pdf":"assets/pdf/iros17_visual_convoying.pdf",
     "tags":["visual tracking","field robotics"],
+    "thumbnail":"/assets/publication-thumbnails/Underwater Multi-Robot Convoying Using Visual Tracking by Detection.png",
     "description":"",
   },
   { 
@@ -266,6 +280,7 @@ export const dataPublications = [
     `,
     "pdf":"assets/pdf/iros17_topological_pursuit.pdf",
     "tags":["planning under uncertainty"],
+    "thumbnail":"/assets/publication-thumbnails/Topologically distinct trajectory predictions for probabilistic pursuit.png",
     "description":"",
   },
   { 
@@ -287,6 +302,7 @@ export const dataPublications = [
     `,
     "html":"https://arxiv.org/abs/1708.04352",
     "tags":["reinforcement learning","simulation"],
+    "thumbnail":"/assets/publication-thumbnails/Benchmark Environments for Multitask Learning in Continuous Domains.png",
     "description":"",
   },
   { 
@@ -303,6 +319,7 @@ export const dataPublications = [
     `,
     "pdf":"assets/pdf/crv_2016_texture_aware_slam.pdf",
     "tags":["field robotics","estimation","perception","visual navigation"],
+    "thumbnail":"/assets/publication-thumbnails/Texture-Aware SLAM Using Stereo Imagery And Inertial Information.png",
     "description":"",
   },
   { 
@@ -317,6 +334,7 @@ export const dataPublications = [
     "pdf":"assets/pdf/iros2014_3d_autopilot.pdf",
     "project":"http://www.cim.mcgill.ca/~dmeger/IROS2014_3DTrajectories/",
     "tags":["field robotics","control"],
+    "thumbnail":"/assets/publication-thumbnails/3D Trajectory Synthesis and Control for a Legged Swimming Robot.png",
     "description":"",
   },
   { 
@@ -334,6 +352,7 @@ export const dataPublications = [
     `,
     "pdf":"assets/pdf/iros2014_gvg.pdf",
     "tags":["planning under uncertainty","exploration"],
+    "thumbnail":"/assets/publication-thumbnails/Ear-based Exploration on Hybrid MetricTopological Maps.png",
     "description":"",
   },
   { 
@@ -348,6 +367,7 @@ export const dataPublications = [
     `,
     "pdf":"assets/pdf/crv2014_asymmetric_rendezvous.pdf",
     "tags":["field robotics","planning under uncertainty","control"],
+    "thumbnail":"/assets/publication-thumbnails/Asymmetric Rendezvous Search at Sea.png",
     "description":"",
   },
   { 
@@ -364,6 +384,7 @@ export const dataPublications = [
     `,
     "pdf":"assets/pdf/icra2014_max_viz_planning.pdf",
     "tags":["planning"],
+    "thumbnail":"/assets/publication-thumbnails/Maximizing Visibility in Collaborative Trajectory Planning.png",
     "description":"",
   },
   { 
@@ -380,6 +401,7 @@ export const dataPublications = [
     `,
     "pdf":"assets/pdf/icra2013_complexity_pursuit_evasion.pdf",
     "tags":["planning under uncertainty"],
+    "thumbnail":"/assets/publication-thumbnails/On the Complexity of Searching for an Evader with a Faster Pursuer.png",
     "description":"",
   },
   { 
@@ -398,6 +420,7 @@ export const dataPublications = [
     "project":"http://www.cim.mcgill.ca/~mrl/multi_robot_env_monitoring/",
     "video":"https://www.youtube.com/watch?time_continue=1&v=DvWVC5R0zqs",
     "tags":["field robotics"],
+    "thumbnail":"/assets/publication-thumbnails/Multi-Domain Monitoring of Marine Environments Using a Heterogeneous Robot Team.png",
     "description":"",
   },
   { 
@@ -414,6 +437,7 @@ export const dataPublications = [
     `,
     "pdf":"assets/pdf/crv2012_social_plan.pdf",
     "tags":["planning"],
+    "thumbnail":"/assets/publication-thumbnails/Socially-Driven Collective Path Planning for Robot Missions.png",
     "description":"",
   },
   { 
@@ -430,6 +454,7 @@ export const dataPublications = [
     `,
     "pdf":"assets/pdf/iros_2011_state_est.pdf",
     "tags":["estimation", "field robotics"],
+    "thumbnail":"/assets/publication-thumbnails/State estimation of an underwater robot using visual and inertial information.png",
     "description":"",
   },
   { 
@@ -446,6 +471,7 @@ export const dataPublications = [
     `,
     "pdf":"assets/pdf/iros2011_boat.pdf",
     "tags":["field robotics","exploration"],
+    "thumbnail":"/assets/publication-thumbnails/MARE Marine Autonomous Robotic Explorer.png",
     "description":"",
   },
   { 
@@ -462,13 +488,7 @@ export const dataPublications = [
     `,
     "pdf":"assets/pdf/crv2011_underwater_ft.pdf",
     "tags":["field robotics","perception"],
+    "thumbnail":"/assets/publication-thumbnails/Feature Tracking Evaluation for Pose Estimation in Underwater Environments.png",
     "description":"",
   },
-  // { 
-  //   "bibtex":`
-      
-  //   `,
-  //   "tags":[],
-  //   "description":"",
-  // },  
 ]

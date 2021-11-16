@@ -5,7 +5,7 @@ import {dataNews} from "../data/news.js"
 export default class News extends Component {
   constructor() {
     super();
-    this.amountShow = 5;
+    this.amountShow = 10;
     this.amountShowExpand = 10;
     this.state={show:this.amountShow}
   }
@@ -25,11 +25,16 @@ export default class News extends Component {
               }
             })
           }
-          <div style={{width:"100%", marginTop:"10px"}}>
-            <div style={{float:"left"}} onClick={()=>{this.setState({show:this.state.show+this.amountShowExpand})}} className={"news-load-more-button " + (this.state.show>=dataNews.length?"news-load-more-button-disabled":"")}>
-              More News
+          {!(this.state.show>=dataNews.length)?
+            <div style={{width:"100%", marginTop:"10px"}}>
+              <div style={{float:"right"}} onClick={()=>{this.setState({show:this.state.show+this.amountShowExpand})}} className={"news-load-more-button"}>
+                <img alt="more" style={{transform:"rotate(270deg)", height:"20px", width:"20px", paddingRight:"2px"}} src={require('../assets/buttons/caret-left-solid.svg').default}/>
+              </div>
             </div>
-          </div>
+            :
+            <></>
+          }
+          
         </div>
       </>
     )
