@@ -18,7 +18,8 @@ export default class Projects extends Component {
           {dataProjects.map((project)=>{
             return <ProjectEntry project={project}/>
           })}
-          </Masonry>
+        </Masonry>
+        <div style={{height:"50px"}}/>
       </div>
     </div>)
   }

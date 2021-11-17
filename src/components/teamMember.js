@@ -34,7 +34,7 @@ export default class TeamMember extends Component {
 
 class TeamMemberSocial extends Component {
   render(){
-    return <a href={(this.props.social==="email" ? "mailto:" : "") + this.props.teamMember[this.props.social]}><img className="team-member-social-icon" src={getSocialPhoto(this.props.social)}/></a>
+    return <a href={(this.props.social==="email" ? "mailto:" : "") + this.props.teamMember[this.props.social]}><img className="team-member-social-icon" alt={this.props.social} src={getSocialPhoto(this.props.social)}/></a>
   }
 }
 
@@ -50,5 +50,7 @@ function getSocialPhoto(social){
       return require("../assets/icons/linkedin-in-brands.svg").default
     case "googleScholar":
       return require("../assets/icons/graduation-cap-solid.svg").default
+    default:
+      return require("../assets/icons/globe-solid.svg").default
   }
 }

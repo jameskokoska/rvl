@@ -52,7 +52,7 @@ export class Navbar extends Component {
           <div className="navbar-flex" style={{zIndex:100, backgroundColor:"white"}}>
             <Link to="/"><img alt="RVL" style={{height:"40px", padding:"5px", marginRight:"20px", position:"absolute", left:"5px", top:"4px"}} src={require("../assets/RVL-icon.png").default}/></Link>
             <div style={{height:"50px"}}/>
-            <div className="navbar-socials" style={{position:"absolute", right:"40px", top:"11px"}}>
+            <div className="navbar-socials" style={{position:"absolute", right:"37px", top:"10px"}}>
               {dataSocials.map((social, index)=>{
                 return <>
                   <NavbarSocial key={social.name} social={social}/>

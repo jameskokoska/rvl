@@ -1,6 +1,5 @@
 import React,{Component} from 'react'
 import "./footer.css"
-import {dataSocials} from "../data/socials.js"
 import { copyrightMessage } from '../data/copyright';
 
 export default class Footer extends Component {

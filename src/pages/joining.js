@@ -25,6 +25,7 @@ export default class Joining extends Component {
         <div className="horizontal-padding max-width">
           <PageHeader title="Joining"/>
           <ReactMarkdown rehypePlugins={[rehypeRaw]}>{this.state.readme}</ReactMarkdown>
+          <div style={{height:"50px"}}/>
         </div>
       </div>
     )
