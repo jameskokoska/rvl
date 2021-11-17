@@ -16,35 +16,36 @@
 .navbar-flex{
   display:flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding-top: 5px;
   padding-bottom: 2px;
+  flex-wrap: wrap;
 }
 
 .navbar-link-text{
   text-decoration: none;
   color: var(--font-color);
-  padding: 25px 22px;
-  margin: 0px 2px;
-  font-size: 16px;
+  padding: 18px 22px;
+  margin: -2px 2px;
+  font-size: 15px;
   background: 
     linear-gradient(to right, #00000000, #00000000),
     linear-gradient(to right, var(--accent-color), var(--accent-color));
-  background-size: 0 2px;
+  background-size: 0 3px;
   background-position: 50% 100%;
   background-repeat: no-repeat;
   transition: background-size 400ms;
 }
 
 .navbar-link-text:hover{
-  background-size: 100% 2px, 100% 2px;
+  background-size: 100% 3px, 100% 3px;
   transition: background-size 400ms;
 }
 
 .navbar-link-text-selected{
   font-weight: bold;
-  background-size: 100% 2px, 100% 2px;
+  background-size: 100% 3px, 100% 3px;
   transition: background-size 400ms;
 }
 
@@ -101,3 +102,68 @@
   background-color: var(--light-dark-accent-color);
   transition: background-color 500ms ;
 }
+
+.navbar-socials{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+.navbar-social{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
+}
+
+.navbar-social-image{
+  width:22px;
+  height:22px;
+  object-fit: contain;
+  transition: transform 500ms;
+  opacity: 0.7;
+}
+
+.navbar-social:hover > .navbar-social-image{
+  transform: scale(1.1);
+  transition: transform 200ms;
+}
+
+@media only screen and (max-width: 1129px) {
+  .navbar-link-text{
+    text-decoration: none;
+    color: var(--font-color);
+    padding: 18px 15px;
+    margin: -2px 2px;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .navbar-link-text{
+    text-decoration: none;
+    color: var(--font-color);
+    padding: 18px 7px;
+    margin: -2px 2px;
+    font-size: 13px;
+  }
+  .navbar-social{
+    padding: 10px 5px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar-social{
+    padding: 10px 4px;
+  }
+  .navbar-social-image{
+    width:20px;
+    height:20px;
+  }
+}
+
