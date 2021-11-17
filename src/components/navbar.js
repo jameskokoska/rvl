@@ -117,7 +117,7 @@ export class NavbarSpace extends Component {
         <div style={{marginTop:"80px"}}></div>
       </div>
       <div className="desktop-view">
-        <div style={{marginTop:"100px"}}></div>
+        <div style={{marginTop:"80px"}}></div>
       </div>
     </>
   }
