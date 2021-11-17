@@ -1,11 +1,10 @@
 .team-member-box{
   background-color: var(--white);
-  padding: 20px 20px;
-  margin: 10px 10px;
+  padding: 15px 15px;
+  margin: 5px 5px;
   flex: 1;
   transition: transform 1s, box-shadow 0.5s;
   border-radius: 10px;
-  box-shadow: 0px 0px 20px var(--shadow-color);
 }
 
 .team-member-title{
@@ -51,25 +50,15 @@
   padding-top: 5px;
 }
 
-.team-member-box:hover{
-  transform: scale(1.01);
-  box-shadow: 0px 0px 20px var(--shadow-color-dark);
-  transition: transform 0.5s, box-shadow 0.5s;
-}
-
-.no-hover > .team-member-box:hover{
-  transform: scale(1);
-}
-
 @media only screen and (max-width: 767px) {
   .team-member-title h3{
     font-size: 18px;
   }
   .team-member-box{
     min-width: 80vw;
-    max-width: 80vw;
-    padding: 20px 20px;
-    margin:10px 0px;
+    max-width: 88vw;
+    padding: 10px 5px;
+    margin:5px 0px;
   }
 }
 

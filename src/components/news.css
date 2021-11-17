@@ -32,6 +32,11 @@
   font-weight: 500;
   transition: background-color 300ms, box-shadow 1200ms;
   user-select: none;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .news-load-more-button:hover{

@@ -4,7 +4,6 @@ import {TransitionGroup, CSSTransition} from 'react-transition-group'
 import ScrollToTop from "./components/scrollToTop"
 import {pages} from "./util/pages"
 import Error404 from './pages/error404'
-// import { SidebarSpace } from './components/sidebar'
 import { Navbar, NavbarSpace } from './components/navbar'
 import Footer from "./components/footer"
 import { dataBlog } from './data/blogs'
@@ -38,7 +37,7 @@ export default function App() {
                     handlePageChange(item.link); 
                     return (
                     <div style={{position:"absolute",right:0, left:0, bottom:0, top:0}}>
-                      <div style={{minHeight: "100vh"}}>
+                      <div style={{minHeight: "calc(100vh - 162px)"}}>
                         {item.link!=="/blog"?<NavbarSpace/>:<div/>}
                         {item.component}
                       </div>
@@ -81,7 +80,6 @@ export default function App() {
               </Switch>
             </CSSTransition>
           </TransitionGroup>
-          <Footer/>
         </div>
       )}} />
     </BrowserRouter>

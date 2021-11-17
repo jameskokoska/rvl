@@ -19,7 +19,6 @@ export default class Home extends Component {
               <News/>
             </div>
           </div>
-          <div style={{height:"50px"}}/>
         </div>
       </div>
       <div className="mobile-view">
@@ -27,7 +26,6 @@ export default class Home extends Component {
           <Slideshow/>
           <ResearchThemes/>
           <News/>
-          <div style={{height:"50px"}}/>
         </div>
       </div>
     </>)

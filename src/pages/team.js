@@ -33,7 +33,6 @@ export default class Team extends Component {
               </Masonry>
             </>
           })}
-        <div style={{height:"50px"}}/>
       </div>
     </div>)
   }

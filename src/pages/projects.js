@@ -19,7 +19,6 @@ export default class Projects extends Component {
             return <ProjectEntry project={project}/>
           })}
         </Masonry>
-        <div style={{height:"50px"}}/>
       </div>
     </div>)
   }

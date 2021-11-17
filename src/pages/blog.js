@@ -17,7 +17,6 @@ export default class Blog extends Component {
             return <BlogEntry blog={blog}/>
           })}
         </div>
-        <div style={{height:"50px"}}/>
         <div style={{position:"absolute", left:0, width:"100vw"}}>
           <Footer/>
         </div>
