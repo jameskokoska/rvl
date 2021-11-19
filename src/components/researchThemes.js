@@ -16,8 +16,8 @@ export default class ResearchThemes extends Component {
               if(this.props.indexesToShow===undefined || this.props.indexesToShow.includes(index))
                 return <>
                   <ResearchThemeComponent
-                    title={item.title}
                     themes={dataResearchThemes[index].content} 
+                    theme={item}
                   />
                 </>
               else
@@ -32,17 +32,20 @@ export default class ResearchThemes extends Component {
 
 class ResearchThemeComponent extends Component {
   render(){
-  
-    
     return(
-      <div className={"research-themes-box"}>
-        <h3>{this.props.title}</h3>
-        <div className="research-theme-circle-container">
-          {this.props.themes.map((data, i) => {
-            return <div className="research-theme-circle">
-              {data}
+      <div className={"research-themes-box"} >
+        <img alt={this.props.theme.title} src={process.env.PUBLIC_URL + "/" + this.props.theme.asset}/>
+        <div className={"research-themes-header-box"}>
+          <div style={{height:"75px", display:"flex", alignItems:"center", justifyContent:"center"}}>
+            <h3>{this.props.theme.title}</h3>
+          </div>
+          <div className={"research-themes-tags"}>
+            {this.props.themes.map((data, i) => {
+              return <div className="research-themes-tag">
+                {data}
+              </div>
+            })}
             </div>
-          })}
         </div>
       </div>
     )

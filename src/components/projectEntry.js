@@ -12,7 +12,7 @@ export default class ProjectEntry extends Component {
       <div style={{display:"flex", flexDirection:"column", justifyContent:"center"}}>
         <div className="project-box-content">
           <h2 style={{margin:0}}>{this.props.project.title}</h2>
-          <p dangerouslySetInnerHTML={{__html: this.props.project.description}}/>
+          {this.props.project.description!==undefined&&this.props.project.description!==""?<p dangerouslySetInnerHTML={{__html: this.props.project.description}}/>:<></>}
         </div>
       </div>
     </div>
