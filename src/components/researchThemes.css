@@ -33,6 +33,8 @@
 .research-themes-box p{
   margin: 0px;
   padding-top: 10px;
+  color: var(--font-color-light);
+  font-size: 15px;
 }
 
 .research-themes-box:hover{

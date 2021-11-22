@@ -1,5 +1,6 @@
 :root {
   --font-color: black;
+  --font-color-light: #797979;
   --font-link-color: #315ae0;
   --accent-color: #a8bcff;
   --accent-color-themes: #c6d3ffcc;
@@ -71,8 +72,8 @@ code {
 h1{
   font-size: 40px;
   margin:0px;
-  font-family: "Bold";
-  font-weight: 100;
+  font-family: "Regular";
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -80,7 +81,8 @@ h2{
   font-size: 28px;
   margin:0px;
   margin-top: 20px;
-  font-family: "Bold";
+  font-family: "Regular";
+  font-weight: 300;
 }
 
 h3{
@@ -91,10 +93,10 @@ h3{
 }
 
 p{
-  font-family: "Light";
+  font-family: "Regular";
   margin: 10px;
   margin-bottom:10px;
-  line-height: 1.45;
+  line-height: 1.5;
 }
 .accent-paragraph{
   font-family: "Regular";
