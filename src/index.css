@@ -94,6 +94,7 @@ p{
   font-family: "Light";
   margin: 10px;
   margin-bottom:10px;
+  line-height: 1.45;
 }
 .accent-paragraph{
   font-family: "Regular";
