@@ -107,14 +107,13 @@ p{
 a{
   text-decoration-color: transparent;
   color: var(--font-link-color);
-  transition: text-decoration-color 250ms, opacity 250ms;
+  transition: text-decoration-color 250ms;
   cursor: pointer;
 }
 
 a:hover{
   text-decoration-color: var(--font-link-color);
-  transition: text-decoration-color 250ms, opacity 250ms;
-  opacity: 0.9;
+  transition: text-decoration-color 250ms;
 }
 
 .a{
