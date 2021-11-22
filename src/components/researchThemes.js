@@ -35,6 +35,9 @@ class ResearchThemeComponent extends Component {
     return(
       <div className={"research-themes-box"} >
         <h3>{this.props.theme.title}</h3>
+        {this.props.themes.map((data, i) => {
+          return <p>{data}</p>
+        })}
       </div>
     )
   }
