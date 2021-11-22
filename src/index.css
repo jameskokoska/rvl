@@ -30,34 +30,26 @@
 }
 
 @font-face{
-  font-family: 'Roboto-Light';
+  font-family: 'Light';
   font-weight: normal;
-  src: url(./assets/fonts/Roboto-Light.ttf);
+  src: url(./assets/fonts/RobotoCondensed-Light.ttf);
 }
 
 @font-face{
-  font-family: 'Rubik-Medium';
+  font-family: 'Regular';
   font-weight: normal;
-  src: url(./assets/fonts/Rubik-Medium.ttf);
+  src: url(./assets/fonts/RobotoCondensed-Regular.ttf);
 }
 
 @font-face{
-  font-family: 'Rubik-Regular';
+  font-family: 'Bold';
   font-weight: normal;
-  src: url(./assets/fonts/Rubik-Regular.ttf);
-}
-
-@font-face{
-  font-family: 'DMSans-Bold';
-  font-weight: normal;
-  src: url(./assets/fonts/DMSans-Bold.ttf);
+  src: url(./assets/fonts/RobotoCondensed-Light.ttf);
 }
 
 body {
   margin: 0;
-  font-family: 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Regular", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
   min-height: 100vh;
@@ -79,29 +71,32 @@ code {
 h1{
   font-size: 40px;
   margin:0px;
-  font-family: "DMSans-Bold";
+  font-family: "Bold";
+  font-weight: 100;
+  font-style: normal;
 }
 
 h2{
   font-size: 28px;
   margin:0px;
   margin-top: 20px;
-  font-family: "DMSans-Bold";
+  font-family: "Bold";
 }
 
 h3{
   margin: 0px;
   margin-top: 10px;
-  font-family: "DMSans-Bold";
+  font-family: "Regular";
+  font-weight: 300;
 }
 
 p{
-  font-family: "Roboto-Light";
+  font-family: "Light";
   margin: 10px;
   margin-bottom:10px;
 }
 .accent-paragraph{
-  font-family: "Rubik-Regular";
+  font-family: "Regular";
 }
 
 a{
