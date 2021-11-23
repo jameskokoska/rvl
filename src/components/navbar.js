@@ -32,14 +32,16 @@ export class Navbar extends Component {
     return(
       <div className="navbar">
         <div className="desktop-view">
-          <div className="navbar-flex">
-            <Link to="/"><img alt="RVL" style={{height:"40px", padding:"5px", marginRight:"20px", position:"absolute", left:"7px", top:"4px"}} src={require("../assets/RVL-icon.png").default}/></Link>
-            {
-              this.navbarPagesTotal.map((item,index)=>{
-                return <NavbarLink selected={this.state.currentLink===item.link} title={item.title} link={item.link}/>
-              })
-            }
-            <div className="navbar-socials" style={{position:"absolute", right:"5px", top:"7px"}}>
+          <div className="navbar-flex horizontal-padding max-width-home">
+            <Link to="/"><img alt="RVL" style={{height:"40px", padding:"5px", paddingLeft:"0px", marginRight:"20px"}} src={require("../assets/RVL-icon.png").default}/></Link>
+            <div>
+              {
+                this.navbarPagesTotal.map((item,index)=>{
+                  return <NavbarLink selected={this.state.currentLink===item.link} title={item.title} link={item.link}/>
+                })
+              }
+            </div>
+            <div className="navbar-socials">
               {dataSocials.map((social, index)=>{
                 return <>
                   <NavbarSocial key={social.name} social={social}/>
@@ -52,7 +54,7 @@ export class Navbar extends Component {
           <div className="navbar-flex" style={{zIndex:100, backgroundColor:"white"}}>
             <Link to="/"><img alt="RVL" style={{height:"40px", padding:"5px", marginRight:"20px", position:"absolute", left:"5px", top:"4px"}} src={require("../assets/RVL-icon.png").default}/></Link>
             <div style={{height:"50px"}}/>
-            <div className="navbar-socials" style={{position:"absolute", right:"37px", top:"10px"}}>
+            <div className="navbar-socials" style={{position:"absolute", right:"38px", top:"10px"}}>
               {dataSocials.map((social, index)=>{
                 return <>
                   <NavbarSocial key={social.name} social={social}/>

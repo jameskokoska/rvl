@@ -47,7 +47,7 @@ function getSocialPhoto(social){
     case "twitter":
       return require("../assets/icons/twitter-brands.svg").default
     case "linkedIn":
-      return require("../assets/icons/linkedin-in-brands.svg").default
+      return require("../assets/icons/linkedin-brands.svg").default
     case "googleScholar":
       return require("../assets/icons/graduation-cap-solid.svg").default
     default:

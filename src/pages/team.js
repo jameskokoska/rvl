@@ -1,7 +1,6 @@
 import React,{Component} from 'react'
 import {dataTeam} from "../data/team"
 import TeamMember from '../components/teamMember';
-import PageHeader from '../components/pageHeader';
 import Masonry from 'react-masonry-css'
 
 const breakpointColumnsObj = {
@@ -19,7 +18,6 @@ export default class Team extends Component {
     }
     return(<div className="center">
       <div className="horizontal-padding max-width">
-        <PageHeader title="Team"/>
         <div style={{height:"10px"}}/>
           {keys.map((key, keyIndex)=>{
             if(key==="title"){

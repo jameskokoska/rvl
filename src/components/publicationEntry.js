@@ -1,53 +1,7 @@
 import React,{Component} from 'react'
 import './publicationEntry.css';
 import useCollapse from 'react-collapsed'
-// import { Document, Page, pdfjs } from 'react-pdf';
-// pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-// function PDF(props) {
-//   if(props.pdf===undefined && props.html===undefined){
-//     return <></>
-//   } else {
-//     let pdfParsed = ""
-//     if(props.pdf!==undefined){
-//       pdfParsed = process.env.PUBLIC_URL+"/"+props.pdf
-//     } else if (props.html!==undefined){
-//       if(props.html.includes("arxiv.org")){
-//         pdfParsed = props.html.replace("abs","pdf") + ".pdf"
-//       } else if(props.html.includes("openreview.net")){
-//         //website does not allow
-//         // pdfParsed = props.html.replace("forum?id=","pdf?id=")
-//         return <></>
-//       } else if(props.html.includes("roboticsproceedings.org")){
-//         //website does not allow
-//         // pdfParsed = props.html.replace(".html","pdf")
-//         return <></>
-//       } else {
-//         return <></>
-//       }
-//     } else {
-//       return <></>
-//     }
-    
-    
-//     return (
-//       <div>
-//         <Document
-//           file={pdfParsed}
-//           loading={<Loading style={{width:"50px", height:"50px", padding:"59px 40px"}}/>}
-//         >
-//           <Page height={200} width={130} pageNumber={1} renderAnnotationLayer={false} renderTextLayer={false}/>
-//         </Document>
-//       </div>
-//     );
-//   }
-// }
-
-// class Loading extends Component{
-//   render(){
-//     return <div style={this.props.style} className="loading"></div>
-//   }
-// }
 
 export default function PublicationEntry(props){
   let extraParams = {"pdf":"pdf","html":"pdf", "bibtex":"bibtex", "video":"video", "project":"project", "code":"code"}

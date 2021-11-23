@@ -2,7 +2,6 @@ import React,{Component} from 'react'
 import { BlogEntry } from '../components/blogEntry'
 import Footer from '../components/footer'
 import { NavbarSpace } from '../components/navbar'
-import PageHeader from '../components/pageHeader'
 import { dataBlog } from '../data/blogs'
 
 export default class Blog extends Component {
@@ -11,7 +10,6 @@ export default class Blog extends Component {
       <div className="horizontal-padding max-width">
         <div style={{minHeight: "100vh"}}>
           <NavbarSpace/>
-          <PageHeader title="Blog"/>
           <div style={{height:"1px"}}/>
           {dataBlog.map((blog)=>{
             return <BlogEntry blog={blog}/>

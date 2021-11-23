@@ -22,6 +22,6 @@ export const dataSocials = [
   {
     "link":"https://robotics.utoronto.ca/",
     "name":"UofT Robotics Institute",
-    "icon":"assets/social-icons/university.png",
+    "icon":"assets/social-icons/robotics.png",
   },
 ]

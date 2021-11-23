@@ -1,7 +1,6 @@
 import React,{Component} from 'react'
 import ReactMarkdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw'
-import PageHeader from '../components/pageHeader'
 
 export default class Joining extends Component {
   constructor(props) {
@@ -23,7 +22,6 @@ export default class Joining extends Component {
     return(
       <div className="center">
         <div className="horizontal-padding max-width">
-          <PageHeader title="Joining"/>
           <ReactMarkdown rehypePlugins={[rehypeRaw]}>{this.state.readme}</ReactMarkdown>
         </div>
       </div>

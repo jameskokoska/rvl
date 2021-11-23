@@ -96,22 +96,29 @@ export default class Publications extends Component {
     }
     let publications = this.state.publications
     let publicationsOut = []
+    let added = false;
     for(let i = 0; i<publications.length; i++){
+      added = false
       for(let j = 0; j<publications[i]["tags"].length; j++){
         if(this.selectedTags.includes(publications[i]["tags"][j]) || this.selectedTags.length===0){
           if(this.searchTerm === ""){
             publicationsOut.push(publications[i])
+            added = true
           } else if(publications[i]["title"].toLowerCase().includes(this.searchTerm.toLowerCase())){
             publicationsOut.push(publications[i])
+            added = true
           } else if (publications[i]["author"].toLowerCase().includes(this.searchTerm.toLowerCase())){
             publicationsOut.push(publications[i])
+            added = true
           } else if (publications[i]["booktitle"].toLowerCase().includes(this.searchTerm.toLowerCase())){
             publicationsOut.push(publications[i])
+            added = true
           } else if (publications[i]["journal"].toLowerCase().includes(this.searchTerm.toLowerCase())){
             publicationsOut.push(publications[i])
+            added = true
           }
-          
         }
+        if(added) break
       }
     }
 

@@ -29,8 +29,8 @@ export class BlogEntry extends Component {
 export class BlogEntryPage extends Component {
   render(){
     return <>
-      <div style={{height:"55px"}}/>
-      <iframe style={{width:"100vw", height:"calc(100vh - 8px - 55px)"}} title="blogPost" src={this.props.src}></iframe>
+      <div style={{height:"55px", marginBottom:"-70px"}}/>
+      <iframe id="iframe" style={{width:"100vw", height:"calc(100vh - 8px - 55px + 70px)"}} title="blogPost" src={this.props.src}></iframe>
     </>
   }
 }
