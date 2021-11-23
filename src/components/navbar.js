@@ -33,7 +33,7 @@ export class Navbar extends Component {
       <div className="navbar">
         <div className="desktop-view">
           <div className="navbar-flex horizontal-padding max-width-home">
-            <Link to="/"><img alt="RVL" style={{height:"40px", padding:"5px", paddingLeft:"0px", marginRight:"20px"}} src={require("../assets/RVL-icon.png").default}/></Link>
+            <Link to="/"><img alt="RVL" style={{height:"40px", padding:"3px", paddingLeft:"0px", marginRight:"20px"}} src={require("../assets/RVL-icon.png").default}/></Link>
             <div>
               {
                 this.navbarPagesTotal.map((item,index)=>{
