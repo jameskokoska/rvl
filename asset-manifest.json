@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/rvl/static/css/main.021d32cf.chunk.css",
-    "main.js": "/rvl/static/js/main.b3f93c6a.chunk.js",
-    "main.js.map": "/rvl/static/js/main.b3f93c6a.chunk.js.map",
+    "main.css": "/rvl/static/css/main.ae3d0ce2.chunk.css",
+    "main.js": "/rvl/static/js/main.1de0e161.chunk.js",
+    "main.js.map": "/rvl/static/js/main.1de0e161.chunk.js.map",
     "runtime-main.js": "/rvl/static/js/runtime-main.439c948b.js",
     "runtime-main.js.map": "/rvl/static/js/runtime-main.439c948b.js.map",
     "static/css/2.ed1298f3.chunk.css": "/rvl/static/css/2.ed1298f3.chunk.css",
-    "static/js/2.b29ae322.chunk.js": "/rvl/static/js/2.b29ae322.chunk.js",
-    "static/js/2.b29ae322.chunk.js.map": "/rvl/static/js/2.b29ae322.chunk.js.map",
+    "static/js/2.968d9f94.chunk.js": "/rvl/static/js/2.968d9f94.chunk.js",
+    "static/js/2.968d9f94.chunk.js.map": "/rvl/static/js/2.968d9f94.chunk.js.map",
     "static/js/3.803f0106.chunk.js": "/rvl/static/js/3.803f0106.chunk.js",
     "static/js/3.803f0106.chunk.js.map": "/rvl/static/js/3.803f0106.chunk.js.map",
     "static/js/4.198c99c9.chunk.js": "/rvl/static/js/4.198c99c9.chunk.js",
     "static/js/4.198c99c9.chunk.js.map": "/rvl/static/js/4.198c99c9.chunk.js.map",
     "index.html": "/rvl/index.html",
     "static/css/2.ed1298f3.chunk.css.map": "/rvl/static/css/2.ed1298f3.chunk.css.map",
-    "static/css/main.021d32cf.chunk.css.map": "/rvl/static/css/main.021d32cf.chunk.css.map",
-    "static/js/2.b29ae322.chunk.js.LICENSE.txt": "/rvl/static/js/2.b29ae322.chunk.js.LICENSE.txt",
+    "static/css/main.ae3d0ce2.chunk.css.map": "/rvl/static/css/main.ae3d0ce2.chunk.css.map",
+    "static/js/2.968d9f94.chunk.js.LICENSE.txt": "/rvl/static/js/2.968d9f94.chunk.js.LICENSE.txt",
     "static/media/RVL-icon.png": "/rvl/static/media/RVL-icon.0d20c34a.png",
     "static/media/index.css": "/rvl/static/media/RobotoCondensed-Regular.db6d9169.ttf",
     "static/media/bars-solid.svg": "/rvl/static/media/bars-solid.e8db7520.svg",
@@ -25,14 +25,14 @@
     "static/media/globe-solid.svg": "/rvl/static/media/globe-solid.cecdc87b.svg",
     "static/media/graduation-cap-solid.svg": "/rvl/static/media/graduation-cap-solid.af8ffce9.svg",
     "static/media/joining.md": "/rvl/static/media/joining.b04edb78.md",
-    "static/media/linkedin-in-brands.svg": "/rvl/static/media/linkedin-in-brands.8fb0cfb6.svg",
+    "static/media/linkedin-brands.svg": "/rvl/static/media/linkedin-brands.f4041044.svg",
     "static/media/twitter-brands.svg": "/rvl/static/media/twitter-brands.87682341.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.439c948b.js",
     "static/css/2.ed1298f3.chunk.css",
-    "static/js/2.b29ae322.chunk.js",
-    "static/css/main.021d32cf.chunk.css",
-    "static/js/main.b3f93c6a.chunk.js"
+    "static/js/2.968d9f94.chunk.js",
+    "static/css/main.ae3d0ce2.chunk.css",
+    "static/js/main.1de0e161.chunk.js"
   ]
 }
