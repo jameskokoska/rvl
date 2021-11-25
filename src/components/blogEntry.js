@@ -86,7 +86,7 @@ export class BlogEntryPage extends Component {
 
   async componentDidMount(){
     if(!this.props.distill){
-      const response = await fetch(this.props.src);
+      const response = await fetch(process.env.PUBLIC_URL+"/"+this.props.src);
       let text = await response.text();
       
       this.setState({
@@ -97,7 +97,6 @@ export class BlogEntryPage extends Component {
   }  
 
   render(){
-    console.log(this.props.distill)
     if(this.props.distill){
       return <>
         <div style={{height:"55px"}}/>
