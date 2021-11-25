@@ -85,8 +85,13 @@ export class BlogEntryPage extends Component {
   }
 
   async componentDidMount(){
+    console.log(this.props.src)
     if(!this.props.distill){
-      const response = await fetch(require("../data/blog-pages/hypercrl.md").default);
+      // const response = await fetch();
+      const filesIn = await importAll(require.context("../data/blog-pages", false, /\.(md)$/))
+
+      const response = await fetch(filesIn[0].default);
+
       let text = await response.text();
       
       this.setState({
@@ -137,3 +142,148 @@ export class BlogEntryPage extends Component {
     }
   }
 }
+function importAll(r) {
+  return r.keys().map(r);
+}
+
+// import React,{Component} from 'react'
+// import ReactMarkdown from 'react-markdown'
+// // import PageHeader from '../components/pageHeader'
+// import remarkMath from 'remark-math'
+// import rehypeKatex from 'rehype-katex'
+// import 'katex/dist/katex.min.css'
+// import ReactDOMServer from 'react-dom/server';
+// import {decode} from 'html-entities';
+
+// function importAll(r) {
+//   return r.keys().map(r);
+// }
+
+// export default class Blog extends Component {
+//   constructor(props) {
+//     super(props)
+//     this.state = {files: []}
+//   }
+//   async componentDidMount(){
+//     //Reload to apply https://distill.pub/template.v1.js in index.html
+//     const reloadCount = sessionStorage.getItem('reloadCount');
+//     if(reloadCount < 2) {
+//       sessionStorage.setItem('reloadCount', String(reloadCount + 1));
+//       window.location.reload();
+//     } else {
+//       sessionStorage.removeItem('reloadCount');
+//     }
+
+//     const filesIn = await importAll(require.context(process.env.PUBLIC_URL + "/blog-pages", false, /\.(md)$/))
+//     console.log(filesIn)
+//     let files = []
+//     for(let i =0; i<filesIn.length; i++){
+//       const response = await fetch(filesIn[i].default);
+//       const text = await response.text();
+//       files.push(text)
+//     }
+    
+//     this.setState({
+//       files: files
+//     })
+//   }
+//   render(){
+//     if(this.state.files===[]){
+//       return <div/>
+//     }
+    
+//     return(
+//       <iframe title="blogPost" src="blog-pages/test.html"></iframe>
+//       // <BlogEntryPage file={this.state.files[0]}/>
+//     )
+//   }
+// }
+
+// class BlogEntryPage extends Component {
+//   render(){
+//     let file = this.props.file
+//     let title = ""
+//     let article = ""
+//     if(file!==undefined){
+//       title = file.split("---")[1]
+//       console.log(title)
+//       article = ReactDOMServer.renderToString(<>
+//         <ReactMarkdown 
+//           remarkPlugins={[remarkMath]}
+//           rehypePlugins={[rehypeKatex]}
+//         >
+//           {file.split("---")[2]}
+//         </ReactMarkdown>
+//       </>)
+//     }
+
+//     let titleOut = `<script type="text/front-matter">${title}</script>`
+//     let articleOut = `<dt-article>
+//       <h1>Title</h1>
+//       <h2>A description of the article</h2>
+//       <dt-byline></dt-byline>
+//       <p>This is the first paragraph of the article.</p>
+//       <p>We can also cite <dt-cite key="gregor2015draw"></dt-cite> external publications.</p>
+//       ${article}
+//     </dt-article>`
+//     let appendixOut = `<dt-appendix></dt-appendix>`
+//     let bibliographyOut = `<script type="text/bibliography">
+//     @article{gregor2015draw,
+//       title={DRAW: A recurrent neural network for image generation},
+//       author={Gregor, Karol and Danihelka, Ivo and Graves, Alex and Rezende, Danilo Jimenez and Wierstra, Daan},
+//       journal={arXivreprint arXiv:1502.04623},
+//       year={2015},
+//       url={https://arxiv.org/pdf/1502.04623.pdf}
+//     }
+//   </script>`
+    
+    
+//     return (<>
+//       <div dangerouslySetInnerHTML={{__html: titleOut}}/>
+//       <div dangerouslySetInnerHTML={{__html: decode(articleOut)}}/>
+//       <div dangerouslySetInnerHTML={{__html: appendixOut}}/>
+//       <div dangerouslySetInnerHTML={{__html: bibliographyOut}}/>
+
+//     </>)
+//   }
+// }
+
+// export class BlogEntryPage extends Component {
+//   render(){
+//     return <>
+//       <div style={{height:"55px", marginBottom:"-70px"}}/>
+//       <iframe id="iframe" style={{width:"100vw", height:"calc(100vh - 8px - 55px + 70px)"}} title="blogPost" src={this.props.src}></iframe>
+//     </>
+//   }
+// }
+
+// export class BlogEntryPage extends Component {
+//   constructor(props) {
+//     super(props)
+//     this.state = {text: ""}
+//   }
+
+//   async componentDidMount(){
+//     const response = await fetch(this.props.src);
+//     console.log(response)
+//     // console.log(await response.text())
+//     const text = await response.text();
+//     this.setState({text:text})
+//   }
+
+//   render(){
+//     console.log(this.state.text)
+    
+    
+//     let markdown = ReactDOMServer.renderToString(<>
+//       <ReactMarkdown 
+//         remarkPlugins={[remarkMath]}
+//         rehypePlugins={[rehypeKatex]}
+//       >
+//         {this.state.text}
+//       </ReactMarkdown>
+//     </>)
+
+//     return <div dangerouslySetInnerHTML={{__html: decode(markdown)}}/>
+//   }
+// }
