@@ -86,7 +86,7 @@ export class BlogEntryPage extends Component {
 
   async componentDidMount(){
     if(!this.props.distill){
-      const response = await fetch(this.props.src);
+      const response = await fetch(require("../data/blog-pages/hypercrl.md").default);
       let text = await response.text();
       
       this.setState({
