@@ -27,7 +27,6 @@
   font-family: var(--monospace);
 }
 .publication-tag{
-  font-family: "Regular";
   display:inline-block;
   background-color: var(--publication-tag);
   border-radius: 5px;

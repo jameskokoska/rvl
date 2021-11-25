@@ -4,8 +4,9 @@ import TeamMember from '../components/teamMember';
 import Masonry from 'react-masonry-css'
 
 const breakpointColumnsObj = {
-  default: 2,
-  985: 1,
+  default: 3,
+  1250: 2,
+  950: 1,
 };
 
 export default class Team extends Component {
