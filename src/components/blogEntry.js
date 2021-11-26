@@ -86,7 +86,7 @@ export class BlogEntryPage extends Component {
 
   async componentDidMount(){
     if(!this.props.distill){
-      const file = await import("../data/blog-pages/hypercrl.md")
+      const file = await import("../data/hypercrl.md")
       console.log(file)
       const response = await fetch(file.default);
       console.log(response)
