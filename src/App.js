@@ -52,7 +52,7 @@ export default function App() {
                       return (
                       <div style={{position:"absolute",right:0, left:0, bottom:0, top:0}}>
                         <div style={{minHeight: "100vh"}}>
-                          <BlogEntryPage distill={blog.asset?.includes(".html")} src={process.env.PUBLIC_URL+"/"+blog.asset}/>
+                          <BlogEntryPage articleData={blog.articleData} distill={blog.asset?.includes(".html")} src={process.env.PUBLIC_URL+"/"+blog.asset}/>
                         </div>
                       </div>
                     )}} key={blog.title}/>

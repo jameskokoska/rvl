@@ -64,20 +64,6 @@ function filterRender(text){
   return outputText
 }
 
-function removeMetaData(text){
-  let outputText = text.split("---")[2]
-  return outputText
-}
-
-function extractMetaData(text){
-  let outputText = text.split("---")[1]
-  //remove any extra comma
-  outputText = outputText.replace(/(\r\n|\n|\r)/gm, "");
-  outputText = outputText.replace(",}","}")
-  let outputJSON = JSON.parse(outputText)
-  return outputJSON
-}
-
 export class BlogEntryPage extends Component {
   constructor(props) {
     super(props)
@@ -88,15 +74,9 @@ export class BlogEntryPage extends Component {
     if(!this.props.distill){
       const response = await fetch(this.props.src);
       let text = await response.text();
-      console.log(response)
       
-      // this.setState({
-      //   text: removeMetaData(filterText(text)),
-      //   metaData: extractMetaData(text)
-      // })
       this.setState({
         text: filterText(text),
-        metaData: text
       })
     }
   }  
@@ -121,13 +101,13 @@ export class BlogEntryPage extends Component {
         <div className="center" style={{minHeight:"100vh"}}>
           <div className="horizontal-padding max-width-blog blog-entry-page">
             <div style={{height:"20px"}}/>
-            <h1 style={{fontWeight:800}}>{this.state.metaData?.title}</h1>
+            <h1 style={{fontWeight:800}}>{this.props.articleData?.title}</h1>
             <div style={{height:"10px"}}/>
             <hr/>
             <div style={{height:"10px"}}/>
-            <h2 style={{margin:0}}>{this.state.metaData?.date}</h2>
+            <h2 style={{margin:0}}>{this.props.articleData?.date}</h2>
             <div style={{display:"flex", flexWrap:"wrap"}}>
-              {this.state.metaData?.authors?.map((author)=>{
+              {this.props.articleData?.authors?.map((author)=>{
                 return <h3 style={{paddingRight: "20px", margin:"5px 0px"}}>{author}</h3>
               })}
             </div>
@@ -140,7 +120,7 @@ export class BlogEntryPage extends Component {
         <Footer/>
       </>
     } else {
-      return <h1>Not Loaded yet</h1>
+      return <></>
     }
   }
 }
