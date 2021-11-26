@@ -87,11 +87,8 @@ export class BlogEntryPage extends Component {
   async componentDidMount(){
     console.log(this.props.src)
     if(!this.props.distill){
-      // const response = await fetch();
-      const filesIn = await importAll(require.context("../data/blog-pages", false, /\.(md)$/))
-
-      const response = await fetch(filesIn[0].default);
-
+      const file = await import("../data/blog-pages/hypercrl.md")
+      const response = await fetch(file.default);
       let text = await response.text();
       
       this.setState({
@@ -141,9 +138,6 @@ export class BlogEntryPage extends Component {
       </>
     }
   }
-}
-function importAll(r) {
-  return r.keys().map(r);
 }
 
 // import React,{Component} from 'react'
