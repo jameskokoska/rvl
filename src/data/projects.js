@@ -11,6 +11,8 @@ export const dataProjects = [
     "title":"Autonomous robots for environmental monitoring",
     "description":"",
     "image":"assets/project-assets/images/placeholder1.jpg",
+    "asset":"assets/project-assets/pages/test.md",
+    "webLocation":"project1",
   },
   {
     "title":"Machine learning for planning and control",

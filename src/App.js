@@ -47,7 +47,7 @@ export default function App() {
                 })}
                 {dataBlog.map((blog)=>{
                   if(blog.asset!==undefined && blog.asset!=="" && blog.webLocation!==undefined && blog.webLocation!==""){
-                    return <Route path={"/blog-"+blog.webLocation} exact render={()=>{
+                    return <Route path={"/blog/"+blog.webLocation} exact render={()=>{
                       handlePageChange("/blog"); 
                       return (
                       <div style={{position:"absolute",right:0, left:0, bottom:0, top:0}}>
