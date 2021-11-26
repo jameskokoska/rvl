@@ -34,7 +34,7 @@ export const dataBlog = [
     "title": "Continual Model-Based Reinforcement Learning with Hypernetworks",
     "date": "August 18, 2020",
     "webLocation": "hypercrl-md", 
-    "asset": "hello.md",
+    "asset": "assets/project-assets/pages/test.md",
   },
   {
     "title": "Continual Model-Based Reinforcement Learning with Hypernetworks",

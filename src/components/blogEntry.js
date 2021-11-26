@@ -86,15 +86,17 @@ export class BlogEntryPage extends Component {
 
   async componentDidMount(){
     if(!this.props.distill){
-      const file = await import("../data/hypercrl.md")
-      console.log(file)
-      const response = await fetch(file.default);
-      console.log(response)
+      const response = await fetch(this.props.src);
       let text = await response.text();
+      console.log(response)
       
+      // this.setState({
+      //   text: removeMetaData(filterText(text)),
+      //   metaData: extractMetaData(text)
+      // })
       this.setState({
-        text: removeMetaData(filterText(text)),
-        metaData: extractMetaData(text)
+        text: text,
+        metaData: text
       })
     }
   }  
@@ -105,7 +107,7 @@ export class BlogEntryPage extends Component {
         <div style={{height:"55px"}}/>
         <iframe id="iframe" style={{width:"100vw", height:"calc(100vh - 8px - 55px)"}} title="blogPost" src={this.props.src}></iframe>
       </>
-    } else {
+    } else if (this.state.text!==""){
       let markdown = ReactDOMServer.renderToString(<>
         <ReactMarkdown 
           remarkPlugins={[remarkMath]}
@@ -125,7 +127,7 @@ export class BlogEntryPage extends Component {
             <div style={{height:"10px"}}/>
             <h2 style={{margin:0}}>{this.state.metaData?.date}</h2>
             <div style={{display:"flex", flexWrap:"wrap"}}>
-              {this.state.metaData?.authors.map((author)=>{
+              {this.state.metaData?.authors?.map((author)=>{
                 return <h3 style={{paddingRight: "20px", margin:"5px 0px"}}>{author}</h3>
               })}
             </div>
@@ -137,6 +139,8 @@ export class BlogEntryPage extends Component {
         </div>
         <Footer/>
       </>
+    } else {
+      return <h1>Not Loaded yet</h1>
     }
   }
 }
