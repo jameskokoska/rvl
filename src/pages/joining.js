@@ -9,7 +9,9 @@ export default class Joining extends Component {
   }
   async componentDidMount(){
     const file = await import("../data/joining.md")
+    console.log(file)
     const response = await fetch(file.default);
+    console.log(response)
     const text = await response.text();
     this.setState({
       readme: text
