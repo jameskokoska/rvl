@@ -1,19 +1,17 @@
 {
   "files": {
     "main.css": "/rvl/static/css/main.e5c8b724.chunk.css",
-    "main.js": "/rvl/static/js/main.1c509a61.chunk.js",
-    "main.js.map": "/rvl/static/js/main.1c509a61.chunk.js.map",
-    "runtime-main.js": "/rvl/static/js/runtime-main.0ace4a1a.js",
-    "runtime-main.js.map": "/rvl/static/js/runtime-main.0ace4a1a.js.map",
+    "main.js": "/rvl/static/js/main.29b40226.chunk.js",
+    "main.js.map": "/rvl/static/js/main.29b40226.chunk.js.map",
+    "runtime-main.js": "/rvl/static/js/runtime-main.6a940f39.js",
+    "runtime-main.js.map": "/rvl/static/js/runtime-main.6a940f39.js.map",
     "static/css/2.a668539e.chunk.css": "/rvl/static/css/2.a668539e.chunk.css",
     "static/js/2.52ddc686.chunk.js": "/rvl/static/js/2.52ddc686.chunk.js",
     "static/js/2.52ddc686.chunk.js.map": "/rvl/static/js/2.52ddc686.chunk.js.map",
-    "static/js/3.e10a73b7.chunk.js": "/rvl/static/js/3.e10a73b7.chunk.js",
-    "static/js/3.e10a73b7.chunk.js.map": "/rvl/static/js/3.e10a73b7.chunk.js.map",
-    "static/js/4.1556d43a.chunk.js": "/rvl/static/js/4.1556d43a.chunk.js",
-    "static/js/4.1556d43a.chunk.js.map": "/rvl/static/js/4.1556d43a.chunk.js.map",
-    "static/js/5.eb97a61d.chunk.js": "/rvl/static/js/5.eb97a61d.chunk.js",
-    "static/js/5.eb97a61d.chunk.js.map": "/rvl/static/js/5.eb97a61d.chunk.js.map",
+    "static/js/3.e1b6df41.chunk.js": "/rvl/static/js/3.e1b6df41.chunk.js",
+    "static/js/3.e1b6df41.chunk.js.map": "/rvl/static/js/3.e1b6df41.chunk.js.map",
+    "static/js/4.b63da8e5.chunk.js": "/rvl/static/js/4.b63da8e5.chunk.js",
+    "static/js/4.b63da8e5.chunk.js.map": "/rvl/static/js/4.b63da8e5.chunk.js.map",
     "index.html": "/rvl/index.html",
     "static/css/2.a668539e.chunk.css.map": "/rvl/static/css/2.a668539e.chunk.css.map",
     "static/css/main.e5c8b724.chunk.css.map": "/rvl/static/css/main.e5c8b724.chunk.css.map",
@@ -27,16 +25,15 @@
     "static/media/envelope-solid.svg": "/rvl/static/media/envelope-solid.80b23b18.svg",
     "static/media/globe-solid.svg": "/rvl/static/media/globe-solid.cecdc87b.svg",
     "static/media/graduation-cap-solid.svg": "/rvl/static/media/graduation-cap-solid.af8ffce9.svg",
-    "static/media/hypercrl.md": "/rvl/static/media/hypercrl.c825b4ac.md",
     "static/media/joining.md": "/rvl/static/media/joining.b04edb78.md",
     "static/media/linkedin-brands.svg": "/rvl/static/media/linkedin-brands.f4041044.svg",
     "static/media/twitter-brands.svg": "/rvl/static/media/twitter-brands.87682341.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.0ace4a1a.js",
+    "static/js/runtime-main.6a940f39.js",
     "static/css/2.a668539e.chunk.css",
     "static/js/2.52ddc686.chunk.js",
     "static/css/main.e5c8b724.chunk.css",
-    "static/js/main.1c509a61.chunk.js"
+    "static/js/main.29b40226.chunk.js"
   ]
 }
