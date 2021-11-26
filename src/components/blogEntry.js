@@ -95,7 +95,7 @@ export class BlogEntryPage extends Component {
       //   metaData: extractMetaData(text)
       // })
       this.setState({
-        text: text,
+        text: filterText(text),
         metaData: text
       })
     }
