@@ -129,9 +129,6 @@ export class BlogEntryPage extends Component {
             </div>
             <div style={{height:"10px"}}/>
             <hr/>
-            <SyntaxHighlighter language="javascript" style={docco}>
-              {"let y = 10;"}
-            </SyntaxHighlighter>
             <div style={{height:"10px"}}/>
             {this.state.htmlSplit && this.state.htmlSplit.map((html)=>{
               if(html.startsWith("<pre><code>")){
