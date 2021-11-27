@@ -32,12 +32,6 @@
 }
 
 @font-face{
-  font-family: 'Light';
-  font-weight: normal;
-  src: url(./assets/fonts/RobotoCondensed-Light.ttf);
-}
-
-@font-face{
   font-family: 'Regular';
   font-style: normal;
   font-weight: 400;
@@ -45,15 +39,9 @@
   src: url(./assets/fonts/RobotoCondensed-Regular.ttf);
 }
 
-@font-face{
-  font-family: 'Bold';
-  font-weight: normal;
-  src: url(./assets/fonts/RobotoCondensed-Light.ttf);
-}
-
 body {
   margin: 0;
-  font-family: "Regular";
+  font-family: "Helvetica, Arial, sans-serif";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
   min-height: 100vh;
@@ -75,7 +63,7 @@ code {
 h1{
   font-size: 40px;
   margin:0px;
-  font-family: "Regular";
+  font-family: "Helvetica", "Arial", sans-serif;
   font-weight: 300;
   font-style: normal;
   color: var(--font-color-dark)
@@ -85,7 +73,7 @@ h2{
   font-size: 28px;
   margin:0px;
   margin-top: 20px;
-  font-family: "Regular";
+  font-family: "Helvetica", "Arial", sans-serif;
   font-weight: 300;
   color: var(--font-color-dark)
 }
@@ -93,21 +81,21 @@ h2{
 h3{
   margin: 0px;
   margin-top: 10px;
-  font-family: "Regular";
+  font-family: "Helvetica", "Arial", sans-serif;
   font-weight: 300;
   color: var(--font-color-dark)
 }
 
 p{
-  font-family: "Regular";
+  font-family: "Helvetica", "Arial", sans-serif;
   margin: 10px;
   margin-bottom:10px;
   line-height: 1.5;
-  letter-spacing: 0.1px;
+  /* letter-spacing: 0.1px; */
   color: var(--font-color-paragraph);
 }
 .accent-paragraph{
-  font-family: "Regular";
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 a{
@@ -115,6 +103,7 @@ a{
   color: var(--font-link-color);
   transition: text-decoration-color 250ms;
   cursor: pointer;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 a:hover{
@@ -129,6 +118,7 @@ a:hover{
   transition: text-decoration-color 250ms, opacity 250ms;
   cursor: pointer;
   user-select: none;
+  font-family: "Helvetica", "Arial", sans-serif
 }
 
 .a:hover{
@@ -206,7 +196,6 @@ html{
   width: 1100px;
 }
 
-
 .mobile-view{
   display: none;
 }
@@ -231,7 +220,6 @@ hr{
     display: none;
   }
 }
-
 
 @media only screen and (max-width: 1200px) {
   .horizontal-padding{
@@ -263,11 +251,6 @@ hr{
   transform: scale(0.95);
   opacity: 0;
 }
-
-/* .math {
-  font-weight: 900;
-  font-style: italic;
-} */
 
 @media only screen and (max-width: 767px) {
   .page-exit-active {

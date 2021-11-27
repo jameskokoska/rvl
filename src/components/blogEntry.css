@@ -24,19 +24,21 @@
   max-width: 860px; 
 }
 
-.code-block{
+pre{
   padding:10px;
   background-color: var(--light-dark-accent-color);
-  word-wrap: break-word;
+  word-wrap: break-word !important;
   border-radius: 10px;
   border-color: var(--light-dark-accent-color-heavy);
   border-width: 1px;
   border-style: solid;
+  padding: 20px !important;
+  overflow-x: hidden !important;
 }
-.code-block p{
+code{
   font-family: 'Courier New', monospace;
-  word-break: break-all;
-  white-space:pre-wrap;
+  word-break: break-all !important;
+  white-space:pre-wrap !important;
 }
 
 @media only screen and (max-width: 767px) {

@@ -4,6 +4,30 @@ Our method has three main attributes: first, it **enables constant-time dynamics
 
 ### [Code](https://github.com/philip-huang/HyperCRL) $~$  [Paper](https://arxiv.org/abs/2009.11997)
 
+```
+function $initHighlight(block, cls) {
+  try {
+    if (cls.search(/\bno\-highlight\b/) != -1)
+      return process(block, true, 0x0F) +
+             ` class="${cls}"`;
+  } catch (e) {
+    /* handle exception */
+  }
+  for (var i = 0 / 2; i < classes.length; i++) {
+    if (checkCondition(classes[i]) === undefined)
+      console.log('undefined');
+  }
+
+  return (
+    <div>
+      <web-component>{block}</web-component>
+    </div>
+  )
+}
+
+export  $initHighlight;
+```
+
 ## Problem Setting
 
 We consider the following problem setting: A robot interacts with the environment to solve a sequence of $T$ goal-directed tasks, each of which brings about different dynamics while having the same state-space $S$ and action space $A$. The robot is exposed to the tasks sequentially online without revisiting data collected in a previous task.

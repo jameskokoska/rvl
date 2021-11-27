@@ -35,6 +35,7 @@
   background-position: 50% 100%;
   background-repeat: no-repeat;
   transition: background-size 400ms;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 .navbar-link-text:hover{
@@ -75,6 +76,7 @@
   border-bottom-right-radius: 3px;
   z-index: -2;
   transition: background-color 700ms;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 .navbar-link-text-mobile:hover{
@@ -142,11 +144,11 @@
   }
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1020px) {
   .navbar-link-text{
     text-decoration: none;
     color: var(--font-color);
-    padding: 18px 7px;
+    padding: 18px 3px;
     margin: -2px 2px;
     font-size: 13px;
   }
@@ -161,14 +163,31 @@
 
 @media only screen and (max-width: 767px) {
   .navbar-social{
-    padding: 10px 4px;
+    padding: 10px 2px;
   }
   .navbar-social-image{
     width:20px;
     height:20px;
   }
   .navbar-socials{
-    margin-right: 20px;
+    margin-right: 18px;
   }
 }
 
+.rvl-icon-desktop{
+  height:40px;
+  padding:2px;
+  padding-left:0px;
+  margin-right:20px;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.rvl-icon-mobile{
+  height:40px;
+  padding:5px;
+  margin-right:20px;
+  position:absolute;
+  left:5px;
+  top:4px;
+  image-rendering: -webkit-optimize-contrast;
+}

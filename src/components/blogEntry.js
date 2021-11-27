@@ -10,6 +10,8 @@ import {decode} from 'html-entities';
 import { NavbarSpace } from './navbar';
 import Footer from './footer';
 
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 export class BlogEntry extends Component {
   render(){
@@ -51,18 +53,15 @@ function filterText(text){
     }
     indexToCheck=indexToCheck+1
   }
-
-  outputText = outputText.replace("<code>","<div className='code-block'><code>")
-  outputText = outputText.replace("</code>","</code></div>")
   return outputText
 }
 
-function filterRender(text){
-  let outputText = text;
-  outputText = outputText.replace("<code>","<div class='code-block'><p>")
-  outputText = outputText.replace("</code>","</p></div>")
-  return outputText
-}
+// function filterRender(text){
+//   let outputText = text;
+//   // outputText = outputText.replace("<code>","<div class='code-block'><p>")
+//   // outputText = outputText.replace("</code>","</p></div>")
+//   return outputText
+// }
 
 export class BlogEntryPage extends Component {
   constructor(props) {
@@ -74,12 +73,37 @@ export class BlogEntryPage extends Component {
     if(!this.props.distill){
       const response = await fetch(this.props.src);
       let text = await response.text();
+
+      let rawText = decode(ReactDOMServer.renderToString(<>
+        <ReactMarkdown 
+          remarkPlugins={[remarkMath]}
+          rehypePlugins={[rehypeKatex]}
+        >
+          {text}
+        </ReactMarkdown>
+      </>))
+
+      rawText = filterText(rawText)
+
+      console.log(rawText)
+
+      let codeSplit = rawText.split("<pre><code>")
+      const htmlSplit = [codeSplit[0]]
+      for(const codeBlock of codeSplit.splice(1)) {
+        const addCodeBack = "<pre><code>" + codeBlock;
+        const splitClosingCodeTag = addCodeBack.split('</code></pre>')
+        const removeNewline = splitClosingCodeTag[0].trimEnd()
+        htmlSplit.push(removeNewline)
+        htmlSplit.push(splitClosingCodeTag[1])
+      }
+
+      console.log(htmlSplit)
       
       this.setState({
-        text: filterText(text),
+        htmlSplit: htmlSplit,
       })
     }
-  }  
+  }
 
   render(){
     if(this.props.distill){
@@ -87,19 +111,11 @@ export class BlogEntryPage extends Component {
         <div style={{height:"55px"}}/>
         <iframe id="iframe" style={{width:"100vw", height:"calc(100vh - 8px - 55px)"}} title="blogPost" src={this.props.src}></iframe>
       </>
-    } else if (this.state.text!==""){
-      let markdown = ReactDOMServer.renderToString(<>
-        <ReactMarkdown 
-          remarkPlugins={[remarkMath]}
-          rehypePlugins={[rehypeKatex]}
-        >
-          {this.state.text}
-        </ReactMarkdown>
-      </>)
+    } else if (this.state.htmlSplit!==""){
       return <>
         <NavbarSpace/>
         <div className="center" style={{minHeight:"100vh"}}>
-          <div className="horizontal-padding max-width-blog blog-entry-page">
+          <div className="horizontal-padding max-width blog-entry-page">
             <div style={{height:"20px"}}/>
             <h1 style={{fontWeight:800}}>{this.props.articleData?.title}</h1>
             <div style={{height:"10px"}}/>
@@ -113,8 +129,20 @@ export class BlogEntryPage extends Component {
             </div>
             <div style={{height:"10px"}}/>
             <hr/>
+            <SyntaxHighlighter language="javascript" style={docco}>
+              {"let y = 10;"}
+            </SyntaxHighlighter>
             <div style={{height:"10px"}}/>
-            <div dangerouslySetInnerHTML={{__html: filterRender(decode(markdown))}}/>
+            {this.state.htmlSplit && this.state.htmlSplit.map((html)=>{
+              if(html.startsWith("<pre><code>")){
+                let htmlRemoved = html.split("<pre><code>")[1]
+                return <SyntaxHighlighter language="javascript" style={docco}>
+                  {htmlRemoved}
+                </SyntaxHighlighter>
+              } else{
+                return <div dangerouslySetInnerHTML={{__html: html}}/>
+              }
+            })}
           </div>
         </div>
         <Footer/>

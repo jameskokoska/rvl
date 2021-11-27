@@ -23,7 +23,7 @@ export default function PublicationEntry(props){
     {props.showYear?<><hr/><h2>{props.publication["year"]}</h2></>:<div/>}
     <div style={{display:"flex", flexDirection:"row", alignItems:"center"}}>
       <div className="desktop-view">
-        <div style={{paddingRight:"13px"}}>
+        <div style={{paddingRight:"25px"}}>
           {thumbnail}
         </div>
       </div>
