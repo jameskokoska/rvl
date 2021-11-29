@@ -28,7 +28,7 @@
 .news-load-more-button{
   padding: 10px;
   background-color: var(--accent-button);
-  border-radius: 10px;
+  border-radius: 100%;
   color:black;
   font-weight: 500;
   transition: background-color 300ms, box-shadow 1200ms;

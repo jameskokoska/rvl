@@ -58,3 +58,22 @@ code{
     height:100%;
   }
 }
+
+.article-data{
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 80px;
+  margin:0px 2%;
+}
+
+.article-data-header{
+  font-size: 12px;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+}
+
+.article-data-label{
+  margin: 3px 0px;
+  font-size: 15px;
+}

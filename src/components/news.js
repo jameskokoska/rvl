@@ -28,7 +28,7 @@ export default class News extends Component {
           {!(this.state.show>=dataNews.length)?
             <div style={{width:"100%", marginTop:"10px"}} className={"center"}>
               <div onClick={()=>{this.setState({show:this.state.show+this.amountShowExpand})}} className={"news-load-more-button"}>
-                <img alt="more" style={{transform:"rotate(270deg)", height:"20px", width:"20px", paddingRight:"2px"}} src={require('../assets/buttons/caret-left-solid.svg').default}/>
+                <img alt="more" style={{height:"24px", width:"24px"}} src={require('../assets/buttons/expand_more.svg').default}/>
               </div>
             </div>
             :
