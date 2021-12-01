@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/rvl/static/css/main.0408c5ad.chunk.css",
-    "main.js": "/rvl/static/js/main.7a3d0b3e.chunk.js",
-    "main.js.map": "/rvl/static/js/main.7a3d0b3e.chunk.js.map",
+    "main.css": "/rvl/static/css/main.fe1fdb5b.chunk.css",
+    "main.js": "/rvl/static/js/main.c953552c.chunk.js",
+    "main.js.map": "/rvl/static/js/main.c953552c.chunk.js.map",
     "runtime-main.js": "/rvl/static/js/runtime-main.c873c643.js",
     "runtime-main.js.map": "/rvl/static/js/runtime-main.c873c643.js.map",
     "static/css/2.a668539e.chunk.css": "/rvl/static/css/2.a668539e.chunk.css",
@@ -14,10 +14,10 @@
     "static/js/4.148fe7e4.chunk.js.map": "/rvl/static/js/4.148fe7e4.chunk.js.map",
     "index.html": "/rvl/index.html",
     "static/css/2.a668539e.chunk.css.map": "/rvl/static/css/2.a668539e.chunk.css.map",
-    "static/css/main.0408c5ad.chunk.css.map": "/rvl/static/css/main.0408c5ad.chunk.css.map",
+    "static/css/main.fe1fdb5b.chunk.css.map": "/rvl/static/css/main.fe1fdb5b.chunk.css.map",
     "static/js/2.dc624a79.chunk.js.LICENSE.txt": "/rvl/static/js/2.dc624a79.chunk.js.LICENSE.txt",
     "static/media/katex.min.css": "/rvl/static/media/KaTeX_Typewriter-Regular.c5c02d76.ttf",
-    "static/media/RVL-icon.svg": "/rvl/static/media/RVL-icon.0a45dbbc.svg",
+    "static/media/RVL-icon.png": "/rvl/static/media/RVL-icon.0d20c34a.png",
     "static/media/index.css": "/rvl/static/media/RobotoCondensed-Regular.db6d9169.ttf",
     "static/media/bars-solid.svg": "/rvl/static/media/bars-solid.e8db7520.svg",
     "static/media/caret-left-solid.svg": "/rvl/static/media/caret-left-solid.f3619997.svg",
@@ -34,7 +34,7 @@
     "static/js/runtime-main.c873c643.js",
     "static/css/2.a668539e.chunk.css",
     "static/js/2.dc624a79.chunk.js",
-    "static/css/main.0408c5ad.chunk.css",
-    "static/js/main.7a3d0b3e.chunk.js"
+    "static/css/main.fe1fdb5b.chunk.css",
+    "static/js/main.c953552c.chunk.js"
   ]
 }
