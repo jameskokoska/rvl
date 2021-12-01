@@ -33,7 +33,7 @@ export class Navbar extends Component {
       <div className="navbar">
         <div className="desktop-view">
           <div className="navbar-flex horizontal-padding max-width-home">
-            <Link to="/"><img alt="RVL" className="rvl-icon-desktop" src={require("../assets/RVL-icon.svg").default}/></Link>
+            <Link to="/"><img alt="RVL" className="rvl-icon-desktop" src={require("../assets/RVL-icon.png").default}/></Link>
             <div>
               {
                 this.navbarPagesTotal.map((item,index)=>{
@@ -52,7 +52,7 @@ export class Navbar extends Component {
         </div>
         <div className="mobile-view">
           <div className="navbar-flex" style={{zIndex:100, backgroundColor:"white"}}>
-            <Link to="/"><img alt="RVL" className="rvl-icon-mobile" src={require("../assets/RVL-icon.svg").default}/></Link>
+            <Link to="/"><img alt="RVL" className="rvl-icon-mobile" src={require("../assets/RVL-icon.png").default}/></Link>
             <div style={{height:"50px"}}/>
             <div className="navbar-socials" style={{position:"absolute", right:"38px", top:"10px"}}>
               {dataSocials.map((social, index)=>{

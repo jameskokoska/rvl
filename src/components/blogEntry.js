@@ -110,8 +110,8 @@ export class BlogEntryPage extends Component {
         <div className="center" style={{minHeight:"100vh"}}>
           <div className="horizontal-padding max-width-blog blog-entry-page">
             <div style={{height:"25px"}}/>
-            <h1 style={{fontWeight:800}}>{this.props.articleData?.title}</h1>
-            <div style={{height:"20px"}}/>
+            {this.props.articleData!==undefined?<><h1 style={{fontWeight:600}}>{this.props.articleData?.title}</h1>
+            {(this.props.articleData.authors!==undefined || this.props.articleData.date!==undefined ||  this.props.articleData.affiliations!==undefined) ? (<><div style={{height:"20px"}}/>
             <hr/>
             <div style={{height:"10px"}}/>
             <div className="article-data">
@@ -143,8 +143,8 @@ export class BlogEntryPage extends Component {
               <></>}
             </div>
             <div style={{height:"10px"}}/>
-            <hr/>
-            <div style={{height:"16px"}}/>
+            <hr/></>):<></>}
+            <div style={{height:"16px"}}/></>:<></>}
             {this.state.htmlSplit && this.state.htmlSplit.map((html)=>{
               if(html.startsWith("<pre><code>")){
                 let htmlRemoved = html.split("<pre><code>")[1]

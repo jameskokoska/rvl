@@ -40,7 +40,7 @@ export const dataBlog = [
       "date": "August 18, 2020",
       "authors":["Yizhou (Philip) Huang","Kevin Xie","Homanga Bharadhwaj","Florian Shkurti"],
       "affiliations":["University of Toronto"],
-    }
+    },
   },
   {
     "title": "Continual Model-Based Reinforcement Learning with Hypernetworks",

@@ -109,25 +109,41 @@ You can always test your changes before by running ```npm start```
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <style>
-  img {width: 80% !important; max-width: 700px;}
-  iframe {width: 80% !important; max-width: 560px; height:315px}
+  p, h1, h2, h3, h4, h5, dt-byline{ max-width: 900px !important; width:90% !important; margin-left:0 !important; margin-right:0 !important;}
+  dt-article{max-width: 900px !important; width:90% !important; margin-left:auto !important; margin-right:auto !important;}
+  img {width: 100% !important; max-width: 700px; margin-left:auto !important; margin-right:auto !important; background-color: bisque !important;}
+  iframe {width: 80% !important; max-width: 560px; height:315px; margin-left:auto !important; margin-right:auto !important;}
+  h1 {font-family: "Helvetica", "Arial", sans-serif !important; font-weight: 700 !important;}
+  h2 {font-family: "Helvetica", "Arial", sans-serif !important; font-weight: 600 !important;}
+  h3 {font-family: "Helvetica", "Arial", sans-serif !important; font-weight: 700 !important; font-size: 20px !important;}
+  p {font-family: "Helvetica", "Arial", sans-serif !important; font-weight: 400 !important;}
+  dt-banner {display: none !important;}
+  .column{display:block; flex-direction: column; min-width: 150px; margin: 0px !important;}
+  .article-data{margin:0px 2%; display: flex; flex-wrap: wrap; row-gap: 20px; column-gap: 20px;}
+  .article-data h4{margin:0px !important;font-size: 12px;margin-bottom: 3px;text-transform: uppercase;}
+  .article-data h3{margin:0px !important;margin: 3px 0px;font-size: 15px !important;font-weight: 300 !important;text-decoration: none !important;font-style: normal !important;}
+  hr{width: 100%;height: 1px;background-color: var(--light-dark-accent-color);border: 0px solid #ffffff00;margin: 30px 0px !important;}
 </style>
 
-<script type="text/front-matter">
-  title: "Article Title"
-  description: "Description of the post"
-  authors:
-  - Chris Olah: http://colah.github.io
-  - Shan Carter: http://shancarter.com
-  affiliations:
-  - Google Brain: http://g.co/brain
-  - Google Brain: http://g.co/brain
-</script>
-
 <dt-article>
-  <h1>Hello World</h1>
-  <h2>A description of the article</h2>
-  <dt-byline></dt-byline>
+  <h1>Continual Model-Based Reinforcement Learning with Hypernetworks</h1>
+  <hr/>
+  <div class="article-data">
+    <div class="column">
+      <h4>Authors</h4>
+      <h3>Author 1</h3>
+      <h3>Author 2</h3>
+    </div>
+    <div class="column">
+      <h4>Affiliations</h4>
+      <h3>Affiliation 1</h3>
+    </div>
+    <div class="column">
+      <h4>Published</h4>
+      <h3>January 25, 2020</h3>
+    </div>
+  </div>
+  <hr/>
   <p>This is the first paragraph of the article.</p>
   <p>We can also cite <dt-cite key="gregor2015draw"></dt-cite> external publications.</p>
 </dt-article>
@@ -151,7 +167,7 @@ You can always test your changes before by running ```npm start```
 * Create a blog entry in the list that links to this created HTML file
 ```
    {
-    "title": "Blog 1 Title",
+    "title": "Blog Title To Distill HTML",
     "date": "August 20, 2021",
     "webLocation": "blogPage1",
     "asset": "assets/blog-pages/blogPage0.html",
@@ -160,7 +176,7 @@ You can always test your changes before by running ```npm start```
 ```
 | attribute | type | notes | example value  |
 |---|---|---|---|
-| title | string | The title to be shown in the list of Blog Pages | "Blog 1 Title" |
+| title | string | The title to be shown in the list of Blog Pages | `"Blog Title To Distill HTML"` |
 | date | string | No specific format | `"August 20, 2021"` |
 | webLocation | string | The URL of that page (will be `exampleWebsite.com/blog/webLocation`) | `"blogPage1"` |
 | asset | string | All locations should point to where assets are stored: `public/` | `"assets/blog-pages/blogPage0.html"`
@@ -170,7 +186,7 @@ You can always test your changes before by running ```npm start```
 * Create a blog entry in the list that links to another website
 ```
   {
-    "title": "Test Entry To External Link",
+    "title": "Blog Title To External Link",
     "date": "September 20, 2020",
     "link": "https://google.ca",
     "description": "Some description.",
@@ -178,10 +194,44 @@ You can always test your changes before by running ```npm start```
 ```
 | attribute | type | notes | example value  |
 |---|---|---|---|
-| title | string | The title to be shown in the list of Blog Pages | "Test Entry To External Link" |
+| title | string | The title to be shown in the list of Blog Pages | `"Blog Title To External Link"` |
 | date | string | No specific format | `"September 20, 2020"` |
 | link | string | Should be a URL starting with `http` | `"https://google.ca"`
 | description | string (optional) | A description | `"Some description."`
+
+### Blog Object 3 - Readme File
+* Create a blog entry in the list that links to a readme file
+```
+{
+  "title": "Blog Title To Readme",
+  "date": "September 20, 2020",
+  "webLocation": "blogPage2", 
+  "asset": "assets/blog-pages/blogPage2.readme",
+  "articleData":{
+    "title": "Blog Title",
+    "date": "September 20, 2020",
+    "authors":["Author 1", "Author 2"],
+    "affiliations":["University of Toronto"],
+  }
+},
+```
+| attribute | type | notes | example value  |
+|---|---|---|---|
+| title | string | The title to be shown in the list of Blog Pages | `"Test Entry To Readme Blog"` |
+| date | string | No specific format | `"September 20, 2020"` |
+| webLocation | string | The URL of that page (will be `exampleWebsite.com/blog/webLocation`) | `"blogPage2"` |
+| asset | string | All locations should point to where assets are stored: `public/` | `"assets/blog-pages/blogPage2.readme"`
+| description | string (optional) | A description | `"Some description."`
+| articleData | object (optional) | Metadata for the article | See below
+
+#### Article Data Object
+| attribute | type | notes | example value  |
+|---|---|---|---|
+| title | string (optional) | The title to be shown in the Blog Pages | `"Blog Title"` |
+| date | string (optional) | No specific format | `"September 20, 2020"` |
+| authors | list of string (optional) | Authors of the article | `["Author 1", "Author 2"]` |
+| affiliations | list of string (optional) | Affiliations of the article | `["University of Toronto"]` |
+
 
 ## Publication Entries
 1. Open `src/data/publications.js` in an editor
