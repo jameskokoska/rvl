@@ -1,9 +1,7 @@
 import React,{Component} from 'react'
 import './projectEntry.css';
 import {Link} from "react-router-dom";
-import ReactMarkdown from 'react-markdown'
-import rehypeRaw from 'rehype-raw'
-import { NavbarSpace } from './navbar';
+import { BlogEntryPage } from './blogEntry';
 
 export default class ProjectEntry extends Component {
   render(){
@@ -19,7 +17,7 @@ export default class ProjectEntry extends Component {
     if(this.props.project.link!==undefined && this.props.project.link!==""){
       return <a href={this.props.project.link} className="no-decoration">{children}</a>
     } else if (this.props.project.asset!==undefined && this.props.project.asset!=="" && this.props.project.webLocation!==undefined && this.props.project.webLocation!==""){
-      return <Link className="no-decoration" to={"/projects/"+this.props.project.webLocation}>
+      return <Link className="no-decoration" to={"/research/"+this.props.project.webLocation}>
         {children}
       </Link>
     } else {
@@ -29,28 +27,7 @@ export default class ProjectEntry extends Component {
 }
 
 export class ProjectEntryPage extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {readme: ""}
-  }
-  async componentDidMount(){
-    const response = await fetch(this.props.src);
-    const text = await response.text();
-    this.setState({
-      readme: text
-    })
-  }
   render(){
-    if(this.state.readme===""){
-      return <div/>
-    }
-    return(
-      <div className="center">
-        <div className="horizontal-padding max-width">
-          <NavbarSpace/>
-          <ReactMarkdown rehypePlugins={[rehypeRaw]}>{this.state.readme}</ReactMarkdown>
-        </div>
-      </div>
-    )
+   return <BlogEntryPage src={this.props.src}/>
   }
 }

@@ -26,7 +26,7 @@
 
 pre{
   padding:10px;
-  background-color: var(--light-dark-accent-color);
+  background-color: var(--light-dark-accent-color-code);
   word-wrap: break-word !important;
   border-radius: 10px;
   border-color: var(--light-dark-accent-color-heavy);
@@ -35,11 +35,22 @@ pre{
   padding: 20px !important;
   overflow-x: hidden !important;
 }
+
 code{
+  background-color: var(--light-dark-accent-color-code);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+pre > code{
+  padding: unset;
+  background-color: unset;
   font-family: 'Courier New', monospace;
   word-break: break-all !important;
   white-space:pre-wrap !important;
 }
+
+
 
 @media only screen and (max-width: 767px) {
   .blog-entry-link > h2 {

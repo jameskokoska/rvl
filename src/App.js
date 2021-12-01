@@ -49,11 +49,14 @@ export default function App() {
                   if(blog.asset!==undefined && blog.asset!=="" && blog.webLocation!==undefined && blog.webLocation!==""){
                     return <Route path={"/blog/"+blog.webLocation} exact render={()=>{
                       handlePageChange("/blog"); 
+                      let distill = blog.asset?.includes(".html")
                       return (
                       <div style={{position:"absolute",right:0, left:0, bottom:0, top:0}}>
                         <div style={{minHeight: "100vh"}}>
-                          <BlogEntryPage articleData={blog.articleData} distill={blog.asset?.includes(".html")} src={process.env.PUBLIC_URL+"/"+blog.asset}/>
+                          <BlogEntryPage articleData={blog.articleData} distill={distill} src={process.env.PUBLIC_URL+"/"+blog.asset}/>
                         </div>
+                        {!distill?<Footer/>:<></>}
+
                       </div>
                     )}} key={blog.title}/>
                   } else {
@@ -62,13 +65,14 @@ export default function App() {
                 })}
                 {dataProjects.map((project)=>{
                   if(project.asset!==undefined && project.asset!=="" && project.webLocation!==undefined && project.webLocation!==""){
-                    return <Route path={"/projects/"+project.webLocation} exact render={()=>{
-                      handlePageChange("/projects"); 
+                    return <Route path={"/research/"+project.webLocation} exact render={()=>{
+                      handlePageChange("/research"); 
                       return (
                       <div style={{position:"absolute",right:0, left:0, bottom:0, top:0}}>
-                        <div style={{minHeight: "100vh"}}>
+                        <div style={{minHeight: "100vh",}}>
                           <ProjectEntryPage src={process.env.PUBLIC_URL+"/"+project.asset}/>
                         </div>
+                        <Footer/>
                       </div>
                     )}} key={project.title}/>
                   } else {

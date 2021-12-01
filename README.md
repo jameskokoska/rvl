@@ -201,12 +201,14 @@ You can always test your changes before by running ```npm start```
 
 ### Blog Object 3 - Readme File
 * Create a blog entry in the list that links to a readme file
+* Markdown supports inline code blocks, and code blocks
+* Also supports math markup using katex: https://katex.org/docs/supported.html
 ```
 {
   "title": "Blog Title To Readme",
   "date": "September 20, 2020",
   "webLocation": "blogPage2", 
-  "asset": "assets/blog-pages/blogPage2.readme",
+  "asset": "assets/blog-pages/blogPage2.md",
   "articleData":{
     "title": "Blog Title",
     "date": "September 20, 2020",
@@ -220,7 +222,7 @@ You can always test your changes before by running ```npm start```
 | title | string | The title to be shown in the list of Blog Pages | `"Test Entry To Readme Blog"` |
 | date | string | No specific format | `"September 20, 2020"` |
 | webLocation | string | The URL of that page (will be `exampleWebsite.com/blog/webLocation`) | `"blogPage2"` |
-| asset | string | All locations should point to where assets are stored: `public/` | `"assets/blog-pages/blogPage2.readme"`
+| asset | string | All locations should point to where assets are stored: `public/` | `"assets/blog-pages/blogPage2.md"`
 | description | string (optional) | A description | `"Some description."`
 | articleData | object (optional) | Metadata for the article | See below
 
@@ -316,7 +318,7 @@ You can always test your changes before by running ```npm start```
 | `linkedIn` | string (optional) | The team member's LinkedIn | `"http://www.linkedin.com"` |
 | `googleScholar` | string (optional) | The team member's Google Scholar | `"http://www.google.ca"` |
 
-## Project Entries
+## Project/Research Entries
 1. Open `src/data/projects.js` in an editor
 2. Add project object to the list (2 types)
 
@@ -324,6 +326,8 @@ You can always test your changes before by running ```npm start```
 * Create a new markdown (`.md`) file to be used for the project
 * This markdown file should be located in `public/`. For example: `public/assets/project-assets/pages/test.md`.
 * All markdown formatting is supported
+* Markdown supports inline code blocks, and code blocks
+* Also supports math markup using katex: https://katex.org/docs/supported.html
 
 ### Project Object 1 - Local Markdown
 ```

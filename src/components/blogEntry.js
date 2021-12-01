@@ -8,8 +8,6 @@ import 'katex/dist/katex.min.css'
 import ReactDOMServer from 'react-dom/server';
 import {decode} from 'html-entities';
 import { NavbarSpace } from './navbar';
-import Footer from './footer';
-
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
@@ -107,43 +105,47 @@ export class BlogEntryPage extends Component {
     } else if (this.state.htmlSplit!==""){
       return <>
         <NavbarSpace/>
-        <div className="center" style={{minHeight:"100vh"}}>
+        <div>
+        <div className="center">
           <div className="horizontal-padding max-width-blog blog-entry-page">
             <div style={{height:"25px"}}/>
-            {this.props.articleData!==undefined?<><h1 style={{fontWeight:600}}>{this.props.articleData?.title}</h1>
-            {(this.props.articleData.authors!==undefined || this.props.articleData.date!==undefined ||  this.props.articleData.affiliations!==undefined) ? (<><div style={{height:"20px"}}/>
-            <hr/>
-            <div style={{height:"10px"}}/>
-            <div className="article-data">
-              {this.props.articleData.authors!==undefined?
-              <div style={{display:"flex", flexDirection:"column"}}>
-                <h4 className="article-data-header">Authors</h4>
-                {this.props.articleData?.authors?.map((author)=>{
-                  return <h3 className="article-data-label">{author}</h3>
-                })}
-              </div>
-              :
-              <></>
-              }
-              {this.props.articleData.affiliations!==undefined?
-              <div style={{display:"flex", flexDirection:"column"}}>
-                <h4 className="article-data-header">Affiliations</h4>
-                {this.props.articleData?.affiliations?.map((author)=>{
-                  return <h3 className="article-data-label">{author}</h3>
-                })}
-              </div>
-              :
-              <></>}
-              {this.props.articleData.date!==undefined?
-              <div style={{display:"flex", flexDirection:"column"}}>
-                <h4 className="article-data-header">Published</h4>
-                <h3 className="article-data-label">{this.props.articleData?.date}</h3>
-              </div>
-              :
-              <></>}
-            </div>
-            <div style={{height:"10px"}}/>
-            <hr/></>):<></>}
+            {this.props.articleData!==undefined?<>
+              <h1 style={{fontWeight:600}}>{this.props.articleData?.title}</h1>
+              {(this.props.articleData.authors!==undefined || this.props.articleData.date!==undefined ||  this.props.articleData.affiliations!==undefined) ? (<><div style={{height:"20px"}}/>
+                <hr/>
+                <div style={{height:"10px"}}/>
+                <div className="article-data">
+                  {this.props.articleData.authors!==undefined?
+                  <div style={{display:"flex", flexDirection:"column"}}>
+                    <h4 className="article-data-header">Authors</h4>
+                    {this.props.articleData?.authors?.map((author)=>{
+                      return <h3 className="article-data-label">{author}</h3>
+                    })}
+                  </div>
+                  :
+                  <></>
+                  }
+                  {this.props.articleData.affiliations!==undefined?
+                  <div style={{display:"flex", flexDirection:"column"}}>
+                    <h4 className="article-data-header">Affiliations</h4>
+                    {this.props.articleData?.affiliations?.map((author)=>{
+                      return <h3 className="article-data-label">{author}</h3>
+                    })}
+                  </div>
+                  :
+                  <></>}
+                  {this.props.articleData.date!==undefined?
+                  <div style={{display:"flex", flexDirection:"column"}}>
+                    <h4 className="article-data-header">Published</h4>
+                    <h3 className="article-data-label">{this.props.articleData?.date}</h3>
+                  </div>
+                  :
+                  <></>}
+                </div>
+                <div style={{height:"10px"}}/>
+                <hr/>
+              </>)
+            :<></>}
             <div style={{height:"16px"}}/></>:<></>}
             {this.state.htmlSplit && this.state.htmlSplit.map((html)=>{
               if(html.startsWith("<pre><code>")){
@@ -157,7 +159,7 @@ export class BlogEntryPage extends Component {
             })}
           </div>
         </div>
-        <Footer/>
+        </div>
       </>
     } else {
       return <></>
