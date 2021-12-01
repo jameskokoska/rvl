@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/rvl/static/css/main.a8e50983.chunk.css",
+    "main.css": "/rvl/static/css/main.ef4ae145.chunk.css",
     "main.js": "/rvl/static/js/main.5fe06f37.chunk.js",
     "main.js.map": "/rvl/static/js/main.5fe06f37.chunk.js.map",
     "runtime-main.js": "/rvl/static/js/runtime-main.c873c643.js",
@@ -14,7 +14,7 @@
     "static/js/4.148fe7e4.chunk.js.map": "/rvl/static/js/4.148fe7e4.chunk.js.map",
     "index.html": "/rvl/index.html",
     "static/css/2.a668539e.chunk.css.map": "/rvl/static/css/2.a668539e.chunk.css.map",
-    "static/css/main.a8e50983.chunk.css.map": "/rvl/static/css/main.a8e50983.chunk.css.map",
+    "static/css/main.ef4ae145.chunk.css.map": "/rvl/static/css/main.ef4ae145.chunk.css.map",
     "static/js/2.d4c97eac.chunk.js.LICENSE.txt": "/rvl/static/js/2.d4c97eac.chunk.js.LICENSE.txt",
     "static/media/katex.min.css": "/rvl/static/media/KaTeX_Typewriter-Regular.c5c02d76.ttf",
     "static/media/RVL-icon.png": "/rvl/static/media/RVL-icon.0d20c34a.png",
@@ -34,7 +34,7 @@
     "static/js/runtime-main.c873c643.js",
     "static/css/2.a668539e.chunk.css",
     "static/js/2.d4c97eac.chunk.js",
-    "static/css/main.a8e50983.chunk.css",
+    "static/css/main.ef4ae145.chunk.css",
     "static/js/main.5fe06f37.chunk.js"
   ]
 }
