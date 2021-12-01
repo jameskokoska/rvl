@@ -345,7 +345,7 @@ You can always test your changes before by running ```npm start```
 | `description` | string | The description of the project | `"a project with a background image"` |
 | `image` | string | The thumbnail image. All locations should point to where assets are stored: `public/` | `"assets/project-assets/images/placeholder1.jpg"` |
 | `asset` | string | The markdown of the page. All locations should point to where assets are stored: `public/` | `"assets/project-assets/pages/test.md"` |
-| webLocation | string | The URL of that page (will be `exampleWebsite.com/projects/webLocation`) | `"project1"` |
+| `webLocation` | string | The URL of that page (will be `exampleWebsite.com/projects/webLocation`) | `"project1"` |
 
 ### Project Object 2 - External Link
 * Also supports just an image, title, and description - with no link
