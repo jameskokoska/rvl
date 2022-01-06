@@ -3,6 +3,8 @@ import TextInput from '../components/textInput'
 import {dataPublications} from "../data/publications.js"
 import PublicationEntry, { PublicationTag } from '../components/publicationEntry';
 import PageHeader from '../components/pageHeader';
+import { withRouter } from 'react-router-dom';
+import queryString from 'query-string';
 
 function convertAuthorList(bibtexAuthorList){
   if(!bibtexAuthorList.toLowerCase().includes(" and ")){
@@ -53,7 +55,7 @@ function cleanupBibEntry(bibtexPassed){
 
 const bibtexParse = require('bibtex-parse-js');
 
-export default class Publications extends Component {
+class Publications extends Component {
   constructor(props){
     super(props)
     this.searchTerm = ""
@@ -86,13 +88,44 @@ export default class Publications extends Component {
     });
     let allTags = this.getAllTags(publications)
     this.setState({publications:publications, shownPublications:publications, allTags: allTags})
+    
+    let params = queryString.parse(this.props.location.search)
+    if(params["tags"]!==undefined || params["search"]!==undefined){
+      console.log(JSON.parse(params["tags"]))
+      if(params["tags"]!==undefined){
+        this.selectedTags = JSON.parse(params["tags"])
+      } else {
+        this.selectedTags = []
+      }
+      if(params["search"]!==undefined){
+        this.searchTerm = JSON.parse(params["search"])
+      } else {
+        this.searchTerm = ""
+      }
+      setTimeout(()=>{this.filterPublications();},1)
+    }
   }
-
 
   filterPublications = () => {
     if(this.searchTerm === "" && this.selectedTags.length===0){
       this.setState({shownPublications:this.state.publications})
+      this.props.history.push({
+        search: "?" + new URLSearchParams({}).toString()
+      })
       return
+    }
+    if(this.selectedTags.length!==0 && this.searchTerm===""){
+      this.props.history.push({
+        search: "?" + new URLSearchParams({tags:JSON.stringify(this.selectedTags)}).toString()
+      })
+    } else if(this.selectedTags.length===0 && this.searchTerm!==""){
+      this.props.history.push({
+        search: "?" + new URLSearchParams({search:JSON.stringify(this.searchTerm)}).toString()
+      })
+    } else {
+      this.props.history.push({
+        search: "?" + new URLSearchParams({tags:JSON.stringify(this.selectedTags),search:JSON.stringify(this.searchTerm)}).toString()
+      })
     }
     let publications = this.state.publications
     let publicationsOut = []
@@ -167,7 +200,7 @@ export default class Publications extends Component {
           <PageHeader showBreak={false} title="Publications">
             <p style={{margin:"10px 0px"}}>Publications by categories in reversed chronological order</p>
             <div style={{marginRight:"30px"}}>
-              <TextInput onChange={(searchTerm)=>{this.searchTerm = searchTerm; this.filterPublications()}} placeholder={"Search title, author, book title..."}/>
+              <TextInput value={this.searchTerm} onChange={(searchTerm)=>{this.searchTerm = searchTerm; this.filterPublications()}} placeholder={"Search title, author, book title..."}/>
             </div>
             {this.state.allTags!==undefined?<div>{this.state.allTags.map((tag)=>{
               return <PublicationTag tag={tag} addSelectedTag={this.addSelectedTag} removeSelectedTag={this.removeSelectedTag} selected={this.selectedTags.includes(tag)}/>
@@ -190,3 +223,4 @@ export default class Publications extends Component {
     </>)
   }
 }
+export default withRouter(Publications)

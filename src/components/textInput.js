@@ -4,7 +4,7 @@ import './textInput.css';
 export default class TextInput extends Component {
   render(){
     return(<>
-      <input style={{...this.props.style,fontSize:"15px"}} type="text" placeholder={this.props.placeholder} onChange={(event)=>this.props.onChange(event.target.value)}/>
+      <input value={this.props.value} style={{...this.props.style,fontSize:"15px"}} type="text" placeholder={this.props.placeholder} onChange={(event)=>this.props.onChange(event.target.value)}/>
     </>)
   }
 }

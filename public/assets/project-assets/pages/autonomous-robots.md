@@ -10,12 +10,8 @@ them, robots that carry science instruments and sensors are a means to an end. O
 themes at RVL is to work together with scientists to enable robust autonomous robots that
 collect useful environmental data on behalf of, or together with, scientists.
 
->
->
-> ```
 > We want to enable fully autonomous robots to collect data like scientists would.
-> ```
->
+
 The areas and volumes these robots are tasked to inspect are too vast to cover exhaustively, so
 a major challenge in retrieving relevant sensor data is to enable informed sensing in physical space.
 Autonomous robots need to pay attention to the right parts of the environment in a way that
@@ -97,7 +93,7 @@ can only visit a small number of underwater locations each day.
 
 <div>
   <p align="center">
-  <img src="assets/project-assets/images/great_barrier_reef.jpg"  alt="method diag"/>
+  <img src='assets/project-assets/images/great_barrier_reef.jpg'  alt="method diag"/>
   </p>
 </div>
 <div>
@@ -115,5 +111,5 @@ robot data collection for environmental monitoring.
 
 [One-Shot Informed Robotic Visual Search in the Wild (IROS 2020)](https://arxiv.org/abs/2003.10010)
 
-[Multi-Domain Monitoring of Marine Environments Using a Heterogeneous Robot Team (IROS 2012)](/rvl/assets/pdf/iros2012_multirobot_env_monitoring.pdf)
+[Multi-Domain Monitoring of Marine Environments Using a Heterogeneous Robot Team (IROS 2012)](assets/pdf/iros2012_multirobot_env_monitoring.pdf)
 

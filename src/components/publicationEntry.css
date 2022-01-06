@@ -60,6 +60,7 @@
   height:150px;
   object-fit: cover;
   transition: transform 400ms;
+  border-radius: 5px;
 }
 .publication-thumbnail:hover{
   transform: scale(1.05);

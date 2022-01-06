@@ -36,21 +36,39 @@ export class BlogEntry extends Component {
 }
 
 function filterText(text){
-  let outputText = text;
-  let indexFound = 0
-  let indexToCheck = 0
-  let imgTag = ""
-  let newImgTag = ""
-  while(indexFound!==-1){
-    indexFound = text.indexOf("<img",indexToCheck);
-    if(indexFound!==-1){
-      imgTag = text.substring(indexFound, text.indexOf(">",indexFound))
-      newImgTag = imgTag.replace("src=\"","src=\""+process.env.PUBLIC_URL+"/")
-      outputText = outputText.replaceAll(imgTag, newImgTag)
-      indexToCheck = indexFound
-    }
-    indexToCheck=indexToCheck+1
-  }
+  // let outputText = text;
+  // let indexFound = 0
+  // let indexToCheck = 0
+  // let tag = ""
+  // let newTag = ""
+  // while(indexFound!==-1){
+  //   indexFound = text.indexOf("<img",indexToCheck);
+  //   if(indexFound!==-1){
+  //     tag = text.substring(indexFound, text.indexOf(">",indexFound))
+  //     newTag = tag.replace("src=\"","src=\""+process.env.PUBLIC_URL+"/")
+  //     newTag = newTag.replace("src='","src='"+process.env.PUBLIC_URL+"/")
+  //     outputText = outputText.replaceAll(tag, newTag)
+  //     indexToCheck = indexFound
+  //   }
+  //   indexToCheck=indexToCheck+1
+  // }
+
+  
+  // indexFound = 0
+  // indexToCheck = 0
+  // while(indexFound!==-1){
+  //   indexFound = text.indexOf("<a",indexToCheck);
+  //   if(indexFound!==-1){
+  //     tag = text.substring(indexFound, text.indexOf(">",indexFound))
+  //     newTag = tag.replace("href=\"assets/","href=\""+process.env.PUBLIC_URL+"/assets/")
+  //     outputText = outputText.replaceAll(tag, newTag)
+  //     indexToCheck = indexFound
+  //   }
+  //   indexToCheck=indexToCheck+1
+  // }
+
+  let outputText = text.replaceAll("\"assets/", "\""+process.env.PUBLIC_URL+"/assets/")
+  outputText = outputText.replaceAll("'assets/", "'"+process.env.PUBLIC_URL+"/assets/")
   return outputText
 }
 
@@ -76,8 +94,6 @@ export class BlogEntryPage extends Component {
 
       rawText = filterText(rawText)
 
-      console.log(rawText)
-
       let codeSplit = rawText.split("<pre><code>")
       const htmlSplit = [codeSplit[0]]
       for(const codeBlock of codeSplit.splice(1)) {
@@ -87,8 +103,6 @@ export class BlogEntryPage extends Component {
         htmlSplit.push(removeNewline)
         htmlSplit.push(splitClosingCodeTag[1])
       }
-
-      console.log(htmlSplit)
       
       this.setState({
         htmlSplit: htmlSplit,
@@ -108,7 +122,7 @@ export class BlogEntryPage extends Component {
         <div>
         <div className="center">
           <div className="horizontal-padding max-width-blog blog-entry-page">
-            <div style={{height:"25px"}}/>
+            {this.props.removeExtraSpace===true?<div/>:<div style={{height:"25px"}}/>}
             {this.props.articleData!==undefined?<>
               <h1 style={{fontWeight:600}}>{this.props.articleData?.title}</h1>
               {(this.props.articleData.authors!==undefined || this.props.articleData.date!==undefined ||  this.props.articleData.affiliations!==undefined) ? (<><div style={{height:"20px"}}/>

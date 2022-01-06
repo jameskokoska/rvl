@@ -10,11 +10,9 @@
 .team-member-title{
   margin: 0px;
   font-size: 24px;
-  margin-left: 19px;
 }
 
 .team-member-socials{
-  margin-left: 19px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -42,11 +40,11 @@
   height: 100px;
   object-fit: cover;
   box-shadow: 0px 0px 20px var(--shadow-color);
+  margin-right: 19px;
 }
 
 .team-member-box p{
   margin: 0px;
-  margin-left: 19px;
   padding-top: 5px;
 }
 
