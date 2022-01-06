@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/rvl/static/css/main.ef4ae145.chunk.css",
-    "main.js": "/rvl/static/js/main.5fe06f37.chunk.js",
-    "main.js.map": "/rvl/static/js/main.5fe06f37.chunk.js.map",
-    "runtime-main.js": "/rvl/static/js/runtime-main.c873c643.js",
-    "runtime-main.js.map": "/rvl/static/js/runtime-main.c873c643.js.map",
+    "main.css": "/rvl/static/css/main.5c6b333c.chunk.css",
+    "main.js": "/rvl/static/js/main.a0755c15.chunk.js",
+    "main.js.map": "/rvl/static/js/main.a0755c15.chunk.js.map",
+    "runtime-main.js": "/rvl/static/js/runtime-main.88ce0668.js",
+    "runtime-main.js.map": "/rvl/static/js/runtime-main.88ce0668.js.map",
     "static/css/2.a668539e.chunk.css": "/rvl/static/css/2.a668539e.chunk.css",
-    "static/js/2.d4c97eac.chunk.js": "/rvl/static/js/2.d4c97eac.chunk.js",
-    "static/js/2.d4c97eac.chunk.js.map": "/rvl/static/js/2.d4c97eac.chunk.js.map",
-    "static/js/3.80a3d923.chunk.js": "/rvl/static/js/3.80a3d923.chunk.js",
-    "static/js/3.80a3d923.chunk.js.map": "/rvl/static/js/3.80a3d923.chunk.js.map",
-    "static/js/4.148fe7e4.chunk.js": "/rvl/static/js/4.148fe7e4.chunk.js",
-    "static/js/4.148fe7e4.chunk.js.map": "/rvl/static/js/4.148fe7e4.chunk.js.map",
+    "static/js/2.ccb9b3eb.chunk.js": "/rvl/static/js/2.ccb9b3eb.chunk.js",
+    "static/js/2.ccb9b3eb.chunk.js.map": "/rvl/static/js/2.ccb9b3eb.chunk.js.map",
+    "static/js/3.962e38ef.chunk.js": "/rvl/static/js/3.962e38ef.chunk.js",
+    "static/js/3.962e38ef.chunk.js.map": "/rvl/static/js/3.962e38ef.chunk.js.map",
+    "static/js/4.59d4025b.chunk.js": "/rvl/static/js/4.59d4025b.chunk.js",
+    "static/js/4.59d4025b.chunk.js.map": "/rvl/static/js/4.59d4025b.chunk.js.map",
     "index.html": "/rvl/index.html",
     "static/css/2.a668539e.chunk.css.map": "/rvl/static/css/2.a668539e.chunk.css.map",
-    "static/css/main.ef4ae145.chunk.css.map": "/rvl/static/css/main.ef4ae145.chunk.css.map",
-    "static/js/2.d4c97eac.chunk.js.LICENSE.txt": "/rvl/static/js/2.d4c97eac.chunk.js.LICENSE.txt",
+    "static/css/main.5c6b333c.chunk.css.map": "/rvl/static/css/main.5c6b333c.chunk.css.map",
+    "static/js/2.ccb9b3eb.chunk.js.LICENSE.txt": "/rvl/static/js/2.ccb9b3eb.chunk.js.LICENSE.txt",
     "static/media/katex.min.css": "/rvl/static/media/KaTeX_Typewriter-Regular.c5c02d76.ttf",
     "static/media/RVL-icon.png": "/rvl/static/media/RVL-icon.0d20c34a.png",
     "static/media/index.css": "/rvl/static/media/RobotoCondensed-Regular.db6d9169.ttf",
@@ -31,10 +31,10 @@
     "static/media/twitter-brands.svg": "/rvl/static/media/twitter-brands.87682341.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c873c643.js",
+    "static/js/runtime-main.88ce0668.js",
     "static/css/2.a668539e.chunk.css",
-    "static/js/2.d4c97eac.chunk.js",
-    "static/css/main.ef4ae145.chunk.css",
-    "static/js/main.5fe06f37.chunk.js"
+    "static/js/2.ccb9b3eb.chunk.js",
+    "static/css/main.5c6b333c.chunk.css",
+    "static/js/main.a0755c15.chunk.js"
   ]
 }
