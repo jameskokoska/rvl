@@ -1,39 +1,20 @@
-# Test Entry for project for Safe Robot
-Test entry
-```
-function $initHighlight(block, cls) {
-  try {
-    if (cls.search(/\bno\-highlight\b/) != -1)
-      return process(block, true, 0x0F) +
-             ` class="${cls}"`;
-  } catch (e) {
-    /* handle exception */
-  }
-  for (var i = 0 / 2; i < classes.length; i++) {
-    if (checkCondition(classes[i]) === undefined)
-      console.log('undefined');
-  }
+## **Safety Considerations During Robot Learning and Deployment**
 
-  return (
-    <div>
-      <web-component>{block}</web-component>
-    </div>
-  )
-}
+While progress in deep learning and computer vision research has been one of the key enablers of deploying
+modern robotics systems in the real world, there is an abundance of research, engineering, and regulatory
+challenges currently precluding the certification of these systems as safe for deployment around humans
+and other animals. Yet, that has not prevented private companies and other organizations from frequently
+deploying and testing (semi-)autonomous robot systems in the wild, among humans who have not necessarily
+explicitly consented to being part of such experiments. In order for the public to trust autonomous robots,
+these systems need to be able to reason about risk in the face of rare events and how to minimize it. 
 
-export  $initHighlight;
-```
-```hello, text inline code```
 
-## Header 2
-* bullet
-* bullet
-1. hello
-2. list
-5. list more
 
-### Equations:
+>
+> 
+> In our lab, we aim to provide safety guarantees about the operation of learning based robotic systems.
+> This includes making progress on (a) **safe exploration** during the learning process, such as bounding the number
+> of mistakes a robot will commit and (b) safety assessments before deployment, in the form of **photorealistic adversarial scenarios**.
+>
+>
 
-$L = \frac{1}{2} \rho v^2 S C_L$
-
-$c = \sqrt{a^2 + b^2}$

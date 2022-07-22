@@ -15,7 +15,7 @@ export const dataProjects = [
     "webLocation":"autonomous-robots",
   },
   {
-    "title":"Machine learning for planning and control",
+    "title":"Learning to plan, perceive, and control",
     "description":"",
     "image":"assets/project-assets/images/placeholder2.jpg",
     "asset":"assets/project-assets/pages/machine-learning.md",

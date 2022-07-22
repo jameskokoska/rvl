@@ -47,7 +47,7 @@
   <h2>Problem Setting</h2>
   <p>We consider the following problem setting: A robot interacts with the environment to solve a sequence of \(T\) goal-directed tasks, each of which brings about different dynamics while having the same state-space \(S\) and action space \(A\). The robot is exposed to the tasks sequentially online without revisiting data collected in a previous task.</p>
   <h2>Our method</h2>
-  <img src="https://github.com/jameskokoska/rvl/raw/main/public/assets/blog-assets/hypercrl/hypercrl_diag.png" alt="method diag">
+  <img src="/rvl/assets/blog-assets/hypercrl/hypercrl_diag.png" alt="method diag">
   <p>We have a learned dynamics model, the parameters of which are inferred through a task-conditioned hypernetwork. Given learned task embeddings and parameters of the hypernetwork, we infer parameters of the dynamics neural network. Using this dynamics model, we perform CEM optimization to generate action sequences and execute them in the environment for \(K\) time-steps with MPC. We store the observed transitions in the replay dataset and update the parameters of the hypernetwork and task-embeddings. We repeat this for \(M\) episodes per task, and for each of the \(T\) tasks sequentially.</p>
   <h2>Video</h2>
   <h3>Door-opening with a Panda arm (2x real time)</h3>
@@ -61,11 +61,11 @@
   <p>To move the second blue block to its goal pose, the panda arm should first hit block 1, which would slide away and in turn set the second block into sliding motion until stoopped by friction. The agent is controlled with an operational space controller similar to the pusher. The different tasks correspond to different friction coeffiecient between the second block and the table top</p>
   <h2>Results</h2>
   <h3>Normalized Reward on the Door Environment during training</h3>
-  <img src="https://github.com/jameskokoska/rvl/raw/main/public/assets/blog-assets/hypercrl/door_pose_reward-01.png" alt="method diag">
+  <img src="/rvl/assets/blog-assets/hypercrl/door_pose_reward-01.png" alt="method diag">
   <h3>Reward on the Pusher Environment during training</h3>
-  <img src="https://github.com/jameskokoska/rvl/raw/main/public/assets/blog-assets/hypercrl/pusher_reward-01.png" alt="method diag">
+  <img src="/rvl/assets/blog-assets/hypercrl/pusher_reward-01.png" alt="method diag">
   <h3>Reward on the Slider environment during training</h3>
-  <img src="https://github.com/jameskokoska/rvl/raw/main/public/assets/blog-assets/hypercrl/pusher_slide_reward-01.png" alt="method diag">
+  <img src="/rvl/assets/blog-assets/hypercrl/pusher_slide_reward-01.png" alt="method diag">
   <hr>
   <p>For more details, please check our paper!</p>
 

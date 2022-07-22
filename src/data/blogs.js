@@ -42,10 +42,10 @@ export const dataBlog = [
       "affiliations":["University of Toronto"],
     },
   },
-  {
-    "title": "Continual Model-Based Reinforcement Learning with Hypernetworks",
-    "date": "August 18, 2020",
-    "webLocation": "hypercrl-html", 
-    "asset": "assets/blog-pages/hypercrl.html",
-  },
+  //{
+  //  "title": "Continual Model-Based Reinforcement Learning with Hypernetworks",
+  //  "date": "August 18, 2020",
+  //  "webLocation": "hypercrl-html", 
+  //  "asset": "assets/blog-pages/hypercrl.html",
+  //},
 ]

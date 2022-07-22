@@ -13,13 +13,13 @@
 }
 
 .blog-entry-page iframe{
-  width: 80% !important; 
+  /* width: 80% !important;*/ 
   max-width: 560px; 
-  height:315px;
+  /* height:315px; */
 }
 
 .blog-entry-page img{
-  width: 80% !important; 
+  /*width: 80% !important;*/ 
   height:100%;
   max-width: 860px;
   border-radius: 5px;
