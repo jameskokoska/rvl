@@ -1,5 +1,11 @@
 # RVL Website
 
+University of Toronto Robot Vision & Learning (RVL) website backbone. 
+
+The official repository containing up-to-date research data and team information can be found here: https://github.com/rvl-lab-utoronto/rvl-lab-utoronto.github.io
+
+The official deployed website release can be found here: https://rvl.cs.toronto.edu/#/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Setup
@@ -30,7 +36,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ## GitHub Pages
 
 1. Add/edit ``homepage`` attribute in ```package.json```
-    ```
+    ```JS
     {
       "homepage":"http://{username}.github.io/{repo-name}",
       "name": "website name",
@@ -65,7 +71,7 @@ You can always test your changes before by running ```npm start```
 2. Add News objects to the list
 
 ### News Object
-```
+```JS
   {
     "date":"2021-08-12",
     "content":"Lorem ipsum...",
@@ -80,7 +86,7 @@ You can always test your changes before by running ```npm start```
 ## Slideshow Images
 1. Open `src/data/slideshow.js` in an editor
 2. Add image location to the list
-```
+```JS
   [
     "assets/slideshow/image0.png",
     "assets/slideshow/image2.png",
@@ -102,7 +108,7 @@ You can always test your changes before by running ```npm start```
 * All HTML formatting is supported
 * Read about the Distill Template and formatting tags: https://distill.pub/guide/
 
-```
+```html
 <!doctype html>
 <meta charset="utf-8">
 <script src="https://distill.pub/template.v1.js"></script>
@@ -165,7 +171,7 @@ You can always test your changes before by running ```npm start```
 ### Blog Object 1 - Distill Template HTML
 * Link the created Distill Template clog write-up
 * Create a blog entry in the list that links to this created HTML file
-```
+```JS
    {
     "title": "Blog Title To Distill HTML",
     "date": "August 20, 2021",
@@ -184,7 +190,7 @@ You can always test your changes before by running ```npm start```
 
 ### Blog Object 2 - External Link
 * Create a blog entry in the list that links to another website
-```
+```JS
   {
     "title": "Blog Title To External Link",
     "date": "September 20, 2020",
@@ -203,7 +209,7 @@ You can always test your changes before by running ```npm start```
 * Create a blog entry in the list that links to a readme file
 * Markdown supports inline code blocks, and code blocks
 * Also supports math markup using katex: https://katex.org/docs/supported.html
-```
+```JS
 {
   "title": "Blog Title To Readme",
   "date": "September 20, 2020",
@@ -240,7 +246,7 @@ You can always test your changes before by running ```npm start```
 2. Add publication object to the list
 
 ### Publication Object
-```
+```JS
   { 
     "bibtex":`
       @InProceedings{id,
@@ -277,7 +283,7 @@ You can always test your changes before by running ```npm start```
 1. Open `src/data/researchThemes.js` in an editor
 2. Add research object to the list
 ### Research Object
-```
+```JS
   {
     "title": "Theme Title",
     "content": [
@@ -295,7 +301,7 @@ You can always test your changes before by running ```npm start```
 1. Open `src/data/team.js` in an editor
 2. Add team object to the list
 ### Team Member Object
-```
+```JS
   {
     "name":"Name",
     "image":"assets/team/name.jpg",
@@ -330,7 +336,7 @@ You can always test your changes before by running ```npm start```
 * Also supports math markup using katex: https://katex.org/docs/supported.html
 
 ### Project Object 1 - Local Markdown
-```
+```JS
   {
     "title":"Project 1",
     "description":"a project with a background image",
@@ -350,7 +356,7 @@ You can always test your changes before by running ```npm start```
 ### Project Object 2 - External Link
 * Also supports just an image, title, and description - with no link
 * `link` is optional
-```
+```JS
   {
     "title":"Project 2",
     "description":"a project that redirects to another website",
@@ -374,7 +380,7 @@ You can always test your changes before by running ```npm start```
 2. Add socials object to the list
 
 ### Socials Object
-``` 
+```JS
   {
     "link":"https://www.youtube.com/",
     "name":"YouTube",
